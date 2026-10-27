@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Administrativo | Autoventas Duarte - Roosevelt 7-24</title>
+  <meta name="description" content="Centro de Control de Inventario, Gestión de Leads y Ventas para Autoventas Duarte.">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23050608'/><path d='M30 25h22c15 0 26 9 26 25s-11 25-26 25H30V25zm16 38h6c7 0 12-4 12-13s-5-13-12-13h-6v26z' fill='%23DC2626'/></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            duarte: {
+              DEFAULT: '#DC2626',
+              dark: '#B91C1C',
+              light: '#EF4444',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #050608;
+      color: #F4F6F8;
+      overflow-x: hidden;
+    }
+
+    /* Minimalist luxury scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050608;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #232936;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #DC2626;
+    }
+
+    /* Liquid Glass styling */
+    .liquid-glass {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.015) 100%);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45), inset 0 1px 1px 0 rgba(255, 255, 255, 0.14);
+      transition: all 0.3s ease;
+    }
+
+    .liquid-glass:hover {
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+  </style>
+</head>
+
+<body class="bg-[#050608] text-[#F4F6F8] antialiased selection:bg-[#DC2626] selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- TOP ADMINISTRATIVE NAVBAR                                                 -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-[#050608]/90 backdrop-blur-xl border-b border-white/[0.08]">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
+      
+      <!-- Brand & Admin Badge -->
+      <div class="flex items-center gap-4">
+        <a href="admin.html" class="flex items-center gap-2.5 group">
+          <div class="w-8 h-8 rounded-lg bg-zinc-900 border border-white/20 text-white flex items-center justify-center font-black italic shadow-inner group-hover:border-[#DC2626] transition-colors">
+            <span class="text-sm font-black italic text-[#DC2626]">D</span>
+          </div>
+          <div class="flex items-baseline">
+            <span class="text-xl font-black italic tracking-tighter text-white">DUARTE</span>
+            <span class="text-[9px] font-extrabold uppercase tracking-[0.25em] text-[#DC2626] ml-1.5">CONTROL</span>
+          </div>
+        </a>
+
+        <div class="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[10px] font-mono text-zinc-400">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          SEDE ROOSEVELT 7-24 &bull; SISTEMA ACTIVO
+        </div>
+      </div>
+
+      <!-- Action: Link to Public Website -->
+      <div class="flex items-center gap-3">
+        <button onclick="openNewCarModal()" class="bg-[#DC2626] hover:bg-[#B91C1C] text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition-all shadow-lg">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+          <span class="hidden sm:inline">NUEVO VEHÍCULO</span>
+          <span class="sm:hidden">+ AUTO</span>
+        </button>
+
+        <a href="index.html" class="bg-white hover:bg-zinc-200 text-black text-xs font-extrabold px-4 sm:px-5 py-2 rounded-xl flex items-center gap-2 transition-all shadow-md">
+          <span>VER SHOWROOM</span>
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ========================================================================= -->
+  <!-- MAIN ADMINISTRATIVE VIEWPORT                                              -->
+  <!-- ========================================================================= -->
+  <main class="max-w-[1600px] mx-auto px-4 sm:px-8 py-8">
+
+    <!-- KPI Metrics Grid -->
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      
+      <!-- Metric 1 -->
+      <div class="liquid-glass rounded-2xl p-5 border border-white/10 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] font-mono uppercase tracking-widest text-zinc-400">TOTAL VEHÍCULOS</span>
+          <div class="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+        </div>
+        <div>
+          <span id="kpi-total-cars" class="text-2xl sm:text-3xl font-black text-white">8</span>
+          <span class="text-[11px] text-zinc-500 block mt-0.5">En catálogo activo</span>
+        </div>
+      </div>
+
+      <!-- Metric 2 -->
+      <div class="liquid-glass rounded-2xl p-5 border border-white/10 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] font-mono uppercase tracking-widest text-emerald-400">DISPONIBLES</span>
+          <div class="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+        </div>
+        <div>
+          <span id="kpi-available-cars" class="text-2xl sm:text-3xl font-black text-emerald-400">7</span>
+          <span class="text-[11px] text-zinc-500 block mt-0.5">Listos para entrega</span>
+        </div>
+      </div>
+
+      <!-- Metric 3 -->
+      <div class="liquid-glass rounded-2xl p-5 border border-white/10 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] font-mono uppercase tracking-widest text-[#DC2626]">VENDIDOS</span>
+          <div class="w-7 h-7 rounded-lg bg-[#DC2626]/10 border border-[#DC2626]/20 flex items-center justify-center text-[#DC2626]">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/></svg>
+          </div>
+        </div>
+        <div>
+          <span id="kpi-sold-cars" class="text-2xl sm:text-3xl font-black text-white">1</span>
+          <span class="text-[11px] text-zinc-500 block mt-0.5">Traspaso SAT efectuado</span>
+        </div>
+      </div>
+
+      <!-- Metric 4 -->
+      <div class="liquid-glass rounded-2xl p-5 border border-white/10 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] font-mono uppercase tracking-widest text-zinc-400">VALOR INVENTARIO</span>
+          <div class="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V6m0 12v-2m0 0c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+        </div>
+        <div>
+          <span id="kpi-total-value" class="text-xl sm:text-2xl font-black text-white">Q 736,500</span>
+          <span class="text-[11px] text-zinc-500 block mt-0.5">Precio de contado activo</span>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- Main Navigation Tabs -->
+    <div class="flex items-center justify-between border-b border-white/[0.08] pb-4 mb-8 overflow-x-auto">
+      
+      <!-- Tab Buttons -->
+      <div class="flex items-center gap-2">
+        <button onclick="switchTab('inventory')" id="tab-btn-inventory" class="admin-tab-btn active px-4 py-2 rounded-xl text-xs font-bold bg-white text-black transition-all flex items-center gap-2">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
+          <span>Gestión de Vehículos</span>
+        </button>
+
+        <button onclick="switchTab('messages')" id="tab-btn-messages" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold text-zinc-400 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] transition-all flex items-center gap-2">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          <span>Mensajes & Citas Recibidas</span>
+          <span id="badge-leads-count" class="px-2 py-0.5 rounded-full bg-[#DC2626] text-white text-[10px] font-bold">3</span>
+        </button>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="flex items-center gap-2">
+        <button onclick="resetDefaultData()" class="px-3 py-1.5 rounded-lg border border-white/10 text-[11px] font-mono text-zinc-400 hover:text-white hover:bg-white/5 transition-colors">
+          Restaurar Datos de Fábrica
+        </button>
+      </div>
+
+    </div>
+
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 1: INVENTORY MANAGEMENT                                           -->
+    <!-- ========================================================================= -->
+    <div id="section-inventory">
+      
+      <!-- Filter Bar & Search -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-6">
+        
+        <!-- Filter Pills -->
+        <div class="flex items-center gap-2">
+          <button onclick="filterInventory('all')" id="inv-pill-all" class="inv-filter-pill active px-3.5 py-1.5 rounded-full text-xs font-bold bg-white text-black transition-all">
+            Todos (<span id="count-all">8</span>)
+          </button>
+          <button onclick="filterInventory('available')" id="inv-pill-available" class="inv-filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium text-zinc-400 bg-white/[0.04] hover:bg-white/[0.08] transition-all">
+            Disponibles (<span id="count-available">7</span>)
+          </button>
+          <button onclick="filterInventory('sold')" id="inv-pill-sold" class="inv-filter-pill px-3.5 py-1.5 rounded-full text-xs font-medium text-zinc-400 bg-white/[0.04] hover:bg-white/[0.08] transition-all">
+            Vendidos (<span id="count-sold">1</span>)
+          </button>
+        </div>
+
+        <!-- Search Input -->
+        <div class="relative w-full sm:w-72">
+          <input 
+            type="text" 
+            id="admin-search-input" 
+            onkeyup="searchInventoryTable()" 
+            placeholder="Buscar por marca, modelo o año..."
+            class="w-full bg-[#0B0D11] border border-white/10 rounded-xl px-4 py-2 pl-9 text-xs text-white focus:outline-none focus:border-[#DC2626] transition-colors"
+          />
+          <svg class="w-4 h-4 text-zinc-500 absolute left-3 top-2.5 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </div>
+
+      </div>
+
+      <!-- Inventory Table / Cards Container -->
+      <div class="liquid-glass rounded-3xl border border-white/10 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            
+            <thead class="bg-white/[0.02] border-b border-white/[0.08] text-[10px] font-mono text-zinc-400 uppercase tracking-widest">
+              <tr>
+                <th class="py-4 px-6">Vehículo</th>
+                <th class="py-4 px-4">Categoría / Specs</th>
+                <th class="py-4 px-4">Precio Contado</th>
+                <th class="py-4 px-4">Cuota Visacuotas</th>
+                <th class="py-4 px-4">Estado</th>
+                <th class="py-4 px-6 text-right">Acciones</th>
+              </tr>
+            </thead>
+
+            <tbody id="inventory-tbody" class="divide-y divide-white/[0.06]">
+              <!-- Injected by JavaScript -->
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 2: LEADS & MESSAGES INBOX                                         -->
+    <!-- ========================================================================= -->
+    <div id="section-messages" class="hidden">
+      
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="text-xl font-black text-white">Bandeja de Citas y Cotizaciones</h2>
+          <p class="text-xs text-zinc-400 mt-1">Registros generados desde la calculadora y agendamiento en el sitio web.</p>
+        </div>
+        <button onclick="clearAllLeads()" class="px-3 py-1.5 rounded-lg border border-red-500/20 text-[11px] font-mono text-red-400 hover:bg-red-500/10 transition-colors">
+          Limpiar Historial
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="leads-grid-container">
+        <!-- Injected by JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="leads-empty-state" class="hidden liquid-glass rounded-3xl p-12 text-center border border-white/10 my-6">
+        <svg class="w-10 h-10 text-zinc-600 mx-auto mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/></svg>
+        <h3 class="text-sm font-bold text-white">No hay citas pendientes</h3>
+        <p class="text-xs text-zinc-500 mt-1">Los formularios enviados por clientes aparecerán aquí automáticamente.</p>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: AGREGAR NUEVO VEHÍCULO                                             -->
+  <!-- ========================================================================= -->
+  <div id="new-car-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/85 backdrop-blur-md transition-opacity">
+    <div class="bg-[#0B0D11] border border-white/15 rounded-3xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+        <div>
+          <span class="text-[10px] font-mono uppercase tracking-widest text-[#DC2626] font-bold block mb-1">[ INVENTARIO ]</span>
+          <h3 class="text-xl font-black text-white">Subir Nuevo Vehículo</h3>
+        </div>
+        <button onclick="closeNewCarModal()" class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white transition-colors">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Form Inputs -->
+      <form id="form-new-car" onsubmit="handleSaveNewCar(event)" class="space-y-4 text-xs">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-zinc-400 font-bold mb-1.5">Nombre Completo del Auto *</label>
+            <input type="text" id="new-name" required placeholder="Ej. Honda Civic 2024 Sport" class="w-full bg-[#12151C] border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#DC2626]">
+          </div>
+
+          <div>
+            <label class="block text-zinc-400 font-bold mb-1.5">Marca *</label>
+            <select id="new-brand" required class="w-full bg-[#12151C] border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#DC2626]">
+              <option value="Toyota">Toyota</option>
+              <option value="Honda">Honda</option>
+              <option value="Mazda">Mazda</option>
+              <option value="Kia">Kia</option>
+              <option value="Hyundai">Hyundai</option>
+              <option value="Nissan">Nissan</option>
+              <option value="Ford">Ford</option>
+              <option value="Chevrolet">Chevrolet</option>
+              <option value="BMW">BMW</option>
+              <option value="Mercedes-Benz">Mercedes-Benz</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div>
+            <label class="block text-zinc-400 font-bold mb-1.5">Año *</label>
+            <input type="number" id="new-year" required min="2010" max="2026" value="2024" class="w-full bg-[#12151C] border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#DC2626]">
+          </div>
+
+          <div>
+            <label class="block text-zinc-400 font-bold mb-1.5">Tipo *</label>
+            <select id="new-type" required class="w-full bg-[#12151C] border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#DC2626]">
+              <option value="SUV">SUV</option>
+              <option value="Sedán">Sedán</option>
+              <option value="Pickup">Pickup</option>
+              <option value="Hatchback">Hatchback</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-zinc-400 font-bold mb-1.5">Transmisión *</label>
+            <select id="new-trans" required class="w-full bg-[#12151C] border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#DC2626]">
+              <option value="Automática">Automática</option>
+              <option value="Mecánica">Mecánica</option>
+              <option value="Secuencial">Secuencial</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-zinc-400 font-bold mb-1.5">Tracción *</label>
+            <select id="new-drive" required class="w-full bg-[#12151C] border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#DC2626]">
+              <option value="4x4">4x4 / AWD</option>
+              <option value="4x2">4x2 / FWD</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-zinc-400 font-bold mb-1.5">Precio de Contado (Q) *</label>
+            <input type="number" id="new-price" required step="500" placeholder="Ej. 85000" class="w-full bg-[#12151C] border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#DC2626]">
+          </div>
+
+          <div>
+            <label class="block text-zinc-400 font-bold mb-1.5">Cuota Estimada (Q/mes) *</label>
+            <input type="number" id="new-monthly" required step="50" placeholder="Ej. 1750" class="w-full bg-[#12151C] border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#DC2626]">
+          </div>
+
+          <div>
+            <label class="block text-zinc-400 font-bold mb-1.5">Millaje *</label>
+            <input type="text" id="new-mileage" required placeholder="Ej. 42,000 mi" class="w-full bg-[#12151C] border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#DC2626]">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-zinc-400 font-bold mb-1.5">URL Foto Principal (Frontal 3/4) *</label>
+          <input type="url" id="new-image" required placeholder="https://images.unsplash.com/..." class="w-full bg-[#12151C] border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#DC2626]">
+        </div>
+
+        <div>
+          <label class="block text-zinc-400 font-bold mb-1.5">Etiquetas / Garantías (separadas por coma)</label>
+          <input type="text" id="new-pills" placeholder="Recién Ingresada, Bolsas Intactas, Motor 1.5 Turbo" class="w-full bg-[#12151C] border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#DC2626]">
+        </div>
+
+        <div class="flex items-center justify-end gap-3 pt-4 border-t border-white/10">
+          <button type="button" onclick="closeNewCarModal()" class="px-5 py-2.5 rounded-xl border border-white/10 text-zinc-400 hover:text-white transition-colors">
+            Cancelar
+          </button>
+          <button type="submit" class="bg-[#DC2626] hover:bg-[#B91C1C] text-white font-bold px-6 py-2.5 rounded-xl transition-all shadow-lg flex items-center gap-2">
+            <span>Guardar & Publicar</span>
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- TOAST NOTIFICATION CONTAINER                                              -->
+  <!-- ========================================================================= -->
+  <div id="toast-notification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-[#12151C] border border-white/20 rounded-2xl px-5 py-3 shadow-2xl flex items-center gap-3">
+      <div id="toast-icon-wrapper" class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <div>
+        <p id="toast-title" class="text-xs font-bold text-white">Operación exitosa</p>
+        <p id="toast-desc" class="text-[11px] text-zinc-400">Los cambios se guardaron en la base local.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT LOGIC (PERSISTENCIA Y GESTIÓN EN TIEMPO REAL)                   -->
+  <!-- ========================================================================= -->
+  <script>
+    // INVENTARIO BASE POR DEFECTO
+    const DEFAULT_VEHICLES = [
+      {
+        id: 'rav4-2014',
+        name: 'Toyota RAV4 XLE 2014 4X4',
+        brand: 'Toyota',
+        type: 'SUV',
+        year: 2014,
+        transmission: 'Automática',
+        drive: '4x4',
+        price: 78500,
+        monthly: 1650,
+        mileage: '78,000 mi',
+        mileageNum: 78000,
+        status: 'Recién Ingresado',
+        payment: 'Financiamiento',
+        primaryPill: '4X4',
+        pills: ['Recién Ingresada', 'Bolsas Buenas', 'Motor 2.5L'],
+        image: 'https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=1200&q=80',
+        isSold: false
+      },
+      {
+        id: 'cx5-2017',
+        name: 'Mazda CX-5 Grand Touring 2017 AWD',
+        brand: 'Mazda',
+        type: 'SUV',
+        year: 2017,
+        transmission: 'Automática',
+        drive: '4x4',
+        price: 92000,
+        monthly: 1950,
+        mileage: '64,000 mi',
+        mileageNum: 64000,
+        status: 'Recién Ingresado',
+        payment: 'Financiamiento',
+        primaryPill: 'AWD',
+        pills: ['Cuero & Sunroof', 'Audio Bose', 'SkyActiv 2.5L'],
+        image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80',
+        isSold: false
+      },
+      {
+        id: 'crv-2016',
+        name: 'Honda CR-V EX-L 2016 AWD',
+        brand: 'Honda',
+        type: 'SUV',
+        year: 2016,
+        transmission: 'Automática',
+        drive: '4x4',
+        price: 88500,
+        monthly: 1850,
+        mileage: '71,000 mi',
+        mileageNum: 71000,
+        status: 'Recién Ingresado',
+        payment: 'Financiamiento',
+        primaryPill: 'AWD',
+        pills: ['Cámara Lateral', 'Asientos Térmicos', 'Motor 2.4L'],
+        image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80',
+        isSold: false
+      },
+      {
+        id: 'sportage-2018',
+        name: 'Kia Sportage LX 2018',
+        brand: 'Kia',
+        type: 'SUV',
+        year: 2018,
+        transmission: 'Automática',
+        drive: '4x2',
+        price: 84000,
+        monthly: 1780,
+        mileage: '59,000 mi',
+        mileageNum: 59000,
+        status: 'Recién Ingresado',
+        payment: 'Financiamiento',
+        primaryPill: '4X2',
+        pills: ['Apple CarPlay', 'Bolsas Intactas', 'Motor 2.4L'],
+        image: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&q=80',
+        isSold: false
+      },
+      {
+        id: 'hilux-2019',
+        name: 'Toyota Hilux SRV 2019 4X4',
+        brand: 'Toyota',
+        type: 'Pickup',
+        year: 2019,
+        transmission: 'Mecánica',
+        drive: '4x4',
+        price: 168000,
+        monthly: 3450,
+        mileage: '88,000 mi',
+        mileageNum: 88000,
+        status: 'De Agencia',
+        payment: 'Financiamiento',
+        primaryPill: 'DIÉSEL',
+        pills: ['Turbo Diésel 1GD', 'Doble Tracción', 'Duraliner'],
+        image: 'https://images.unsplash.com/photo-1559416523-140ddc3d238c?auto=format&fit=crop&w=1200&q=80',
+        isSold: false
+      },
+      {
+        id: 'civic-2017',
+        name: 'Honda Civic EX 2017 Turbo',
+        brand: 'Honda',
+        type: 'Sedán',
+        year: 2017,
+        transmission: 'Automática',
+        drive: '4x2',
+        price: 69000,
+        monthly: 1450,
+        mileage: '68,000 mi',
+        mileageNum: 68000,
+        status: 'Recién Ingresado',
+        payment: 'Visacuotas',
+        primaryPill: 'TURBO',
+        pills: ['1.5L VTEC Turbo', 'Freno Eléctrico', 'Pantalla Touch'],
+        image: 'https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=1200&q=80',
+        isSold: false
+      },
+      {
+        id: 'tucson-2018',
+        name: 'Hyundai Tucson Limited 2018',
+        brand: 'Hyundai',
+        type: 'SUV',
+        year: 2018,
+        transmission: 'Automática',
+        drive: '4x2',
+        price: 82000,
+        monthly: 1720,
+        mileage: '62,000 mi',
+        mileageNum: 62000,
+        status: 'Recién Ingresado',
+        payment: 'Financiamiento',
+        primaryPill: 'LIMITED',
+        pills: ['Techo Panorámico', 'Compuerta Eléctrica', 'Motor 2.0L'],
+        image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80',
+        isSold: false
+      },
+      {
+        id: 'corolla-2016',
+        name: 'Toyota Corolla S 2016',
+        brand: 'Toyota',
+        type: 'Sedán',
+        year: 2016,
+        transmission: 'Secuencial',
+        drive: '4x2',
+        price: 64500,
+        monthly: 1380,
+        mileage: '75,000 mi',
+        mileageNum: 75000,
+        status: 'Recién Ingresado',
+        payment: 'Visacuotas',
+        primaryPill: 'EDICIÓN S',
+        pills: ['Paddle Shifters', 'Aros de Lujo', 'Modo Sport'],
+        image: 'https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=1200&q=80',
+        isSold: true
+      }
+    ];
+
+    // CITAS Y MENSAJES DE EJEMPLO INICIAL
+    const DEFAULT_LEADS = [
+      {
+        id: 'lead-1',
+        name: 'Carlos Morales',
+        phone: '5542-8910',
+        carName: 'Toyota RAV4 XLE 2014 4X4',
+        downpayment: 'Q 15,700 (20%)',
+        monthly: 'Q 1,650 / mes',
+        term: '48 meses',
+        appointmentDate: 'Martes 27 de Octubre, 2026',
+        appointmentTime: '11:00 AM',
+        dateSubmitted: '27 Oct 2026, 00:30',
+        status: 'Nuevo'
+      },
+      {
+        id: 'lead-2',
+        name: 'Ing. Roberto Solís',
+        phone: '4120-7733',
+        carName: 'Toyota Hilux SRV 2019 4X4',
+        downpayment: 'Q 50,400 (30%)',
+        monthly: 'Q 3,450 / mes',
+        term: '36 meses',
+        appointmentDate: 'Miércoles 28 de Octubre, 2026',
+        appointmentTime: '02:00 PM',
+        dateSubmitted: '26 Oct 2026, 18:45',
+        status: 'Confirmada'
+      },
+      {
+        id: 'lead-3',
+        name: 'Licda. Andrea Arriola',
+        phone: '3012-9988',
+        carName: 'Mazda CX-5 Grand Touring 2017 AWD',
+        downpayment: 'Q 18,400 (20%)',
+        monthly: 'Q 1,950 / mes',
+        term: '48 meses',
+        appointmentDate: 'Viernes 30 de Octubre, 2026',
+        appointmentTime: '10:00 AM',
+        dateSubmitted: '26 Oct 2026, 15:10',
+        status: 'Contactado'
+      }
+    ];
+
+    // STORAGE HANDLERS
+    function getVehicles() {
+      const stored = localStorage.getItem('autoventas_duarte_vehicles');
+      if (stored) {
+        try { return JSON.parse(stored); } catch (e) { }
+      }
+      localStorage.setItem('autoventas_duarte_vehicles', JSON.stringify(DEFAULT_VEHICLES));
+      return DEFAULT_VEHICLES;
+    }
+
+    function saveVehicles(list) {
+      localStorage.setItem('autoventas_duarte_vehicles', JSON.stringify(list));
+      updateDashboard();
+    }
+
+    function getLeads() {
+      const stored = localStorage.getItem('autoventas_duarte_leads');
+      if (stored) {
+        try { return JSON.parse(stored); } catch (e) { }
+      }
+      localStorage.setItem('autoventas_duarte_leads', JSON.stringify(DEFAULT_LEADS));
+      return DEFAULT_LEADS;
+    }
+
+    function saveLeads(list) {
+      localStorage.setItem('autoventas_duarte_leads', JSON.stringify(list));
+      renderLeads();
+    }
+
+    function resetDefaultData() {
+      if (confirm('¿Deseas restaurar el catálogo y citas con la configuración original de Autoventas Duarte?')) {
+        localStorage.setItem('autoventas_duarte_vehicles', JSON.stringify(DEFAULT_VEHICLES));
+        localStorage.setItem('autoventas_duarte_leads', JSON.stringify(DEFAULT_LEADS));
+        updateDashboard();
+        showToast('Restauración completada', 'Los datos volvieron a su estado de fábrica.');
+      }
+    }
+
+    // TABS SWITCHER
+    function switchTab(tab) {
+      const btnInv = document.getElementById('tab-btn-inventory');
+      const btnMsg = document.getElementById('tab-btn-messages');
+      const secInv = document.getElementById('section-inventory');
+      const secMsg = document.getElementById('section-messages');
+
+      if (tab === 'inventory') {
+        btnInv.className = 'admin-tab-btn active px-4 py-2 rounded-xl text-xs font-bold bg-white text-black transition-all flex items-center gap-2';
+        btnMsg.className = 'admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold text-zinc-400 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] transition-all flex items-center gap-2';
+        secInv.classList.remove('hidden');
+        secMsg.classList.add('hidden');
+      } else {
+        btnMsg.className = 'admin-tab-btn active px-4 py-2 rounded-xl text-xs font-bold bg-white text-black transition-all flex items-center gap-2';
+        btnInv.className = 'admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold text-zinc-400 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] transition-all flex items-center gap-2';
+        secMsg.classList.remove('hidden');
+        secInv.classList.add('hidden');
+        renderLeads();
+      }
+    }
+
+    // INVENTORY FILTER
+    let currentFilterState = 'all';
+    function filterInventory(status) {
+      currentFilterState = status;
+      document.querySelectorAll('.inv-filter-pill').forEach(btn => {
+        btn.classList.remove('bg-white', 'text-black', 'active');
+        btn.classList.add('text-zinc-400', 'bg-white/[0.04]');
+      });
+
+      const activeBtn = document.getElementById(`inv-pill-${status}`);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-white', 'text-black', 'active');
+        activeBtn.classList.remove('text-zinc-400', 'bg-white/[0.04]');
+      }
+
+      renderInventoryTable();
+    }
+
+    function searchInventoryTable() {
+      renderInventoryTable();
+    }
+
+    // RENDER INVENTORY TABLE
+    function renderInventoryTable() {
+      const vehicles = getVehicles();
+      const tbody = document.getElementById('inventory-tbody');
+      const query = (document.getElementById('admin-search-input')?.value || '').toLowerCase();
+
+      let filtered = vehicles;
+      if (currentFilterState === 'available') {
+        filtered = filtered.filter(c => !c.isSold);
+      } else if (currentFilterState === 'sold') {
+        filtered = filtered.filter(c => c.isSold);
+      }
+
+      if (query) {
+        filtered = filtered.filter(c => 
+          c.name.toLowerCase().includes(query) || 
+          c.brand.toLowerCase().includes(query) || 
+          c.year.toString().includes(query) ||
+          c.type.toLowerCase().includes(query)
+        );
+      }
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="6" class="py-12 text-center text-zinc-500">
+              No se encontraron vehículos bajo el criterio actual.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(car => `
+        <tr class="hover:bg-white/[0.02] transition-colors ${car.isSold ? 'opacity-70' : ''}">
+          
+          <!-- Car Visual & Name -->
+          <td class="py-4 px-6">
+            <div class="flex items-center gap-3">
+              <div class="w-14 h-10 rounded-lg overflow-hidden bg-zinc-900 border border-white/10 shrink-0 relative">
+                <img src="${car.image}" alt="${car.name}" class="w-full h-full object-cover">
+                ${car.isSold ? '<div class="absolute inset-0 bg-red-950/80 flex items-center justify-center text-[8px] font-black text-white">VENDIDO</div>' : ''}
+              </div>
+              <div>
+                <span class="font-extrabold text-white text-xs block">${car.name}</span>
+                <span class="text-[11px] text-zinc-400 font-mono">${car.mileage} &bull; ${car.transmission}</span>
+              </div>
+            </div>
+          </td>
+
+          <!-- Specs -->
+          <td class="py-4 px-4 text-zinc-300">
+            <span class="inline-block px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] font-mono mr-1">${car.type}</span>
+            <span class="inline-block px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] font-mono">${car.drive}</span>
+          </td>
+
+          <!-- Cash Price -->
+          <td class="py-4 px-4">
+            <strong class="text-white font-black text-sm">Q ${car.price.toLocaleString('es-GT')}</strong>
+          </td>
+
+          <!-- Installment -->
+          <td class="py-4 px-4">
+            <span class="text-xs font-bold text-[#DC2626]">Desde Q ${car.monthly.toLocaleString('es-GT')}/mes</span>
+          </td>
+
+          <!-- Status Pill -->
+          <td class="py-4 px-4">
+            ${car.isSold 
+              ? '<span class="px-2.5 py-1 rounded-full text-[10px] font-mono font-bold bg-red-500/10 border border-red-500/30 text-red-400">Vendido</span>' 
+              : '<span class="px-2.5 py-1 rounded-full text-[10px] font-mono font-bold bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">Disponible</span>'
+            }
+          </td>
+
+          <!-- Actions -->
+          <td class="py-4 px-6 text-right">
+            <div class="flex items-center justify-end gap-2">
+              
+              <!-- Toggle Sold/Available -->
+              <button onclick="toggleCarSold('${car.id}')" title="${car.isSold ? 'Marcar como Disponible' : 'Marcar como Vendido'}" class="px-3 py-1.5 rounded-lg text-[11px] font-bold border ${car.isSold ? 'border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10' : 'border-[#DC2626]/30 text-[#DC2626] hover:bg-[#DC2626]/10'} transition-colors">
+                ${car.isSold ? 'Habilitar' : 'Vender'}
+              </button>
+
+              <!-- Delete -->
+              <button onclick="deleteCar('${car.id}')" title="Eliminar del catálogo" class="p-1.5 rounded-lg border border-white/10 text-zinc-500 hover:text-red-400 hover:border-red-500/30 transition-colors">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+              </button>
+
+            </div>
+          </td>
+
+        </tr>
+      `).join('');
+    }
+
+    // ACTIONS: TOGGLE SOLD
+    function toggleCarSold(id) {
+      const vehicles = getVehicles();
+      const car = vehicles.find(c => c.id === id);
+      if (!car) return;
+
+      car.isSold = !car.isSold;
+      saveVehicles(vehicles);
+
+      showToast(
+        car.isSold ? 'Vehículo marcado como VENDIDO' : 'Vehículo marcado como DISPONIBLE',
+        `${car.name} ahora figura como ${car.isSold ? 'vendido' : 'disponible'} en el catálogo.`
+      );
+    }
+
+    // ACTIONS: DELETE CAR
+    function deleteCar(id) {
+      const vehicles = getVehicles();
+      const car = vehicles.find(c => c.id === id);
+      if (!car) return;
+
+      if (confirm(`¿Estás seguro de eliminar el vehículo "${car.name}" del inventario?`)) {
+        const updated = vehicles.filter(c => c.id !== id);
+        saveVehicles(updated);
+        showToast('Vehículo eliminado', `${car.name} fue retirado del inventario.`);
+      }
+    }
+
+    // MODAL: ADD CAR
+    function openNewCarModal() {
+      document.getElementById('new-car-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeNewCarModal() {
+      document.getElementById('new-car-modal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function handleSaveNewCar(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('new-name').value.trim();
+      const brand = document.getElementById('new-brand').value;
+      const year = parseInt(document.getElementById('new-year').value);
+      const type = document.getElementById('new-type').value;
+      const transmission = document.getElementById('new-trans').value;
+      const drive = document.getElementById('new-drive').value;
+      const price = parseFloat(document.getElementById('new-price').value);
+      const monthly = parseFloat(document.getElementById('new-monthly').value);
+      const mileage = document.getElementById('new-mileage').value.trim();
+      const image = document.getElementById('new-image').value.trim();
+      const pillsInput = document.getElementById('new-pills').value.trim();
+
+      const pills = pillsInput ? pillsInput.split(',').map(p => p.trim()) : ['Recién Ingresado', 'Bolsas Intactas'];
+      const mileageNum = parseInt(mileage.replace(/\D/g, '')) || 50000;
+
+      const newCar = {
+        id: 'car-' + Date.now(),
+        name,
+        brand,
+        year,
+        type,
+        transmission,
+        drive,
+        price,
+        monthly,
+        mileage,
+        mileageNum,
+        status: 'Recién Ingresado',
+        payment: 'Financiamiento',
+        primaryPill: drive.toUpperCase(),
+        pills,
+        image,
+        gallery: [
+          { url: image, label: '1. Vista Frontal 3/4' }
+        ],
+        isSold: false
+      };
+
+      const vehicles = getVehicles();
+      vehicles.unshift(newCar);
+      saveVehicles(vehicles);
+
+      closeNewCarModal();
+      document.getElementById('form-new-car').reset();
+      showToast('Vehículo publicado con éxito', `${name} ya está disponible en el showroom.`);
+    }
+
+    // LEADS & APPOINTMENTS
+    function renderLeads() {
+      const leads = getLeads();
+      const container = document.getElementById('leads-grid-container');
+      const empty = document.getElementById('leads-empty-state');
+      const badge = document.getElementById('badge-leads-count');
+
+      badge.textContent = leads.length;
+
+      if (leads.length === 0) {
+        container.innerHTML = '';
+        empty.classList.remove('hidden');
+        return;
+      }
+
+      empty.classList.add('hidden');
+      container.innerHTML = leads.map(lead => `
+        <div class="liquid-glass rounded-2xl p-5 border border-white/10 flex flex-col justify-between">
+          <div>
+            
+            <div class="flex items-start justify-between gap-2 mb-3">
+              <div>
+                <span class="text-[10px] font-mono text-[#DC2626] font-bold block mb-0.5">${lead.dateSubmitted}</span>
+                <h4 class="text-sm font-extrabold text-white">${lead.name}</h4>
+                <p class="text-xs text-zinc-400 flex items-center gap-1.5 mt-0.5">
+                  <svg class="w-3 h-3 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                  <span>${lead.phone}</span>
+                </p>
+              </div>
+              <span class="px-2 py-0.5 rounded text-[9px] font-mono font-bold ${lead.status === 'Confirmada' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30' : 'bg-white/5 text-zinc-400 border border-white/10'}">${lead.status}</span>
+            </div>
+
+            <div class="bg-black/40 rounded-xl p-3 border border-white/5 space-y-1.5 text-xs">
+              <p class="text-zinc-300 font-semibold truncate"><strong class="text-white">Auto:</strong> ${lead.carName}</p>
+              <div class="flex justify-between text-[11px] text-zinc-400">
+                <span>Enganche: <strong class="text-white">${lead.downpayment}</strong></span>
+                <span>Cuota: <strong class="text-[#DC2626]">${lead.monthly}</strong></span>
+              </div>
+              <div class="pt-1 border-t border-white/5 text-[11px] text-zinc-400">
+                <span>Visita: <strong class="text-white">${lead.appointmentDate} a las ${lead.appointmentTime}</strong></span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="flex items-center gap-2 mt-4 pt-3 border-t border-white/[0.08]">
+            <a href="https://wa.me/502${lead.phone.replace(/\D/g, '')}?text=${encodeURIComponent(`Hola ${lead.name}, le saludamos de Autoventas Duarte respecto a su solicitud para el vehículo ${lead.carName}.`)}" target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-colors">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+              <span>Escribir por WhatsApp</span>
+            </a>
+            
+            <button onclick="deleteLead('${lead.id}')" class="p-2 rounded-lg border border-white/10 text-zinc-500 hover:text-red-400 transition-colors" title="Eliminar lead">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            </button>
+          </div>
+
+        </div>
+      `).join('');
+    }
+
+    function deleteLead(id) {
+      const leads = getLeads().filter(l => l.id !== id);
+      saveLeads(leads);
+      showToast('Registro eliminado', 'La cita fue retirada de la bandeja.');
+    }
+
+    function clearAllLeads() {
+      if (confirm('¿Deseas vaciar la bandeja de mensajes y citas recibidas?')) {
+        saveLeads([]);
+        showToast('Bandeja vaciada', 'No hay citas registradas.');
+      }
+    }
+
+    // DASHBOARD METRICS CALCULATION
+    function updateDashboard() {
+      const vehicles = getVehicles();
+      const total = vehicles.length;
+      const sold = vehicles.filter(c => c.isSold).length;
+      const available = total - sold;
+
+      const activeValue = vehicles.filter(c => !c.isSold).reduce((acc, c) => acc + (c.price || 0), 0);
+
+      document.getElementById('kpi-total-cars').textContent = total;
+      document.getElementById('kpi-available-cars').textContent = available;
+      document.getElementById('kpi-sold-cars').textContent = sold;
+      document.getElementById('kpi-total-value').textContent = 'Q ' + activeValue.toLocaleString('es-GT');
+
+      document.getElementById('count-all').textContent = total;
+      document.getElementById('count-available').textContent = available;
+      document.getElementById('count-sold').textContent = sold;
+
+      renderInventoryTable();
+    }
+
+    // TOAST NOTIFIER
+    let toastTimeout;
+    function showToast(title, desc) {
+      const toast = document.getElementById('toast-notification');
+      document.getElementById('toast-title').textContent = title;
+      document.getElementById('toast-desc').textContent = desc;
+
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3500);
+    }
+
+    // INIT
+    document.addEventListener('DOMContentLoaded', () => {
+      updateDashboard();
+      renderLeads();
+    });
+  </script>
+
+</body>
+</html>

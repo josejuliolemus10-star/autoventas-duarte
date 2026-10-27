@@ -1,0 +1,2428 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autoventas Duarte | Colección Automotriz de Alta Gama en Calzada Roosevelt, Guatemala</title>
+  <meta name="description" content="Autoventas Duarte - Importadora directa y boutique de vehículos seminuevos seleccionados en Calzada Roosevelt 7-24 Zona 2, Mixco. Garantía de 120 puntos, historial Carfax y Visacuotas hasta 48 meses.">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23DC2626'><path d='M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z'/></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            duarte: {
+              DEFAULT: '#DC2626',
+              dark: '#B91C1C',
+              light: '#EF4444',
+            },
+            obsidian: {
+              950: '#000000',
+              900: '#050608',
+              850: '#0B0D11',
+              800: '#11141A',
+              700: '#181D26',
+              600: '#232936',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #050608;
+      color: #F4F6F8;
+      overflow-x: hidden;
+    }
+
+    /* Minimalist luxury scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050608;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #232936;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #DC2626;
+    }
+
+    /* Minimalist Dark Range Slider */
+    input[type=range] {
+      -webkit-appearance: none;
+      width: 100%;
+      background: #181D26;
+      height: 4px;
+      border-radius: 9999px;
+      outline: none;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #DC2626;
+      cursor: pointer;
+      border: 2px solid #FFFFFF;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+    input[type=range]::-webkit-slider-thumb:hover {
+      background: #B91C1C;
+      transform: scale(1.15);
+    }
+    input[type=range]::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #DC2626;
+      cursor: pointer;
+      border: 2px solid #FFFFFF;
+    }
+
+    /* LUXURY ENTRANCE & LIQUID GLASS SYSTEM */
+    @keyframes luxuryFadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes liquidFloat {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(20px, -15px) scale(1.05); }
+    }
+
+    .animate-luxury-in {
+      animation: luxuryFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .animate-liquid-blob {
+      animation: liquidFloat 9s ease-in-out infinite;
+    }
+
+    /* LIQUID GLASS ULTRA-LUXURY (ACABADO CRISTAL LÍQUIDO) */
+    .liquid-glass {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.015) 100%);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45), inset 0 1px 1px 0 rgba(255, 255, 255, 0.16);
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .liquid-glass:hover {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+      border-color: rgba(255, 255, 255, 0.22);
+      box-shadow: 0 12px 38px 0 rgba(0, 0, 0, 0.6), inset 0 1px 2px 0 rgba(255, 255, 255, 0.25);
+    }
+
+    .liquid-glass-active {
+      background: linear-gradient(135deg, rgba(220, 38, 38, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%) !important;
+      border-color: rgba(220, 38, 38, 0.4) !important;
+      box-shadow: 0 14px 40px -5px rgba(220, 38, 38, 0.22), inset 0 1px 2px 0 rgba(255, 255, 255, 0.3) !important;
+    }
+
+    /* Bespoke Dark Luxury Filter for Google Maps Iframe */
+    .map-dark-filter {
+      filter: invert(90%) hue-rotate(180deg) contrast(1.15) brightness(0.88) saturate(0.82);
+    }
+  </style>
+</head>
+
+<body class="bg-[#050608] text-[#F4F6F8] antialiased selection:bg-[#DC2626] selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- LUXURY INTRO PRELOADER VEIL (ANIMACIÓN CINEMÁTICA AL ABRIR) -->
+  <!-- ========================================================================= -->
+  <div id="luxury-preloader" class="fixed inset-0 z-[100] bg-[#050608] flex flex-col items-center justify-center transition-all duration-700 pointer-events-none">
+    <div class="flex flex-col items-center gap-3 transform transition-transform duration-700" id="preloader-content">
+      <div class="w-12 h-12 rounded-2xl bg-zinc-900 border border-white/20 flex items-center justify-center font-black italic shadow-2xl">
+        <span class="text-2xl font-black italic text-[#DC2626]">D</span>
+      </div>
+      <div class="flex items-baseline tracking-tighter">
+        <span class="text-2xl font-black italic text-white">DUARTE</span>
+        <span class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-[#DC2626] ml-2">AUTOVENTAS</span>
+      </div>
+      <!-- Thin Red Loading Bar -->
+      <div class="w-36 h-[2px] bg-white/10 rounded-full overflow-hidden mt-2">
+        <div class="h-full bg-[#DC2626] w-full animate-pulse"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- LUXURY MINIMALIST HEADER -->
+  <!-- ========================================================================= -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-[#050608]/85 backdrop-blur-xl border-b border-white/[0.06] transition-all">
+    <div class="max-w-[1500px] mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
+      
+      <!-- Left Pill Menu Button -->
+      <div class="flex items-center gap-3">
+        <a href="#catalogo" class="bg-white/10 hover:bg-white/15 border border-white/15 text-white text-xs font-bold px-5 py-2 rounded-full transition-all flex items-center gap-2">
+          <span>CATÁLOGO</span>
+          <svg class="w-3.5 h-3.5 text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+
+        <!-- Navigation Links for Desktop -->
+        <div class="hidden lg:flex items-center gap-6 text-xs font-semibold text-zinc-400 pl-4 border-l border-white/10">
+          <a href="#garantias" class="hover:text-white transition-colors">Garantías</a>
+          <a href="#filtros" class="hover:text-white transition-colors">Búsqueda</a>
+          <a href="#financiamiento" class="hover:text-white transition-colors">Visacuotas</a>
+          <a href="#testimonios" class="hover:text-white transition-colors">Clientes</a>
+          <a href="#faq" class="hover:text-white transition-colors">Preguntas</a>
+          <a href="#ubicacion" class="hover:text-white transition-colors">Sede Roosevelt</a>
+        </div>
+      </div>
+
+      <!-- Center Brand: Duarte Monogram -->
+      <a href="#hero" class="flex items-center gap-2.5 select-none group">
+        <div class="w-8 h-8 rounded-lg bg-zinc-900 border border-white/20 text-white flex items-center justify-center font-black italic shadow-inner group-hover:border-[#DC2626] transition-colors">
+          <span class="text-sm font-black italic text-[#DC2626]">D</span>
+        </div>
+        <div class="flex items-baseline">
+          <span class="text-xl font-black italic tracking-tighter text-white">DUARTE</span>
+          <span class="text-[9px] font-extrabold uppercase tracking-[0.25em] text-[#DC2626] ml-1.5">AUTOVENTAS</span>
+        </div>
+      </a>
+
+      <!-- Right Pill Action Button -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/50257175666" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-2 text-xs font-bold text-zinc-400 hover:text-white transition-colors pr-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>5717-5666</span>
+        </a>
+
+        <a href="#financiamiento" class="bg-white hover:bg-zinc-200 text-black text-xs font-extrabold px-5 py-2 rounded-full transition-all flex items-center gap-2">
+          <span>AGENDAR CITA</span>
+          <svg class="w-3 h-3 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ========================================================================= -->
+  <!-- 1. HERO SECTION EDITORIAL MINIMALISTA -->
+  <!-- ========================================================================= -->
+  <section id="hero" class="pt-32 pb-16 md:pt-40 md:pb-24 max-w-[1500px] mx-auto px-4 sm:px-8 relative overflow-hidden animate-luxury-in">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <!-- Left Column: Editorial Headline & Luxury Pill CTAs -->
+      <div class="lg:col-span-6 z-10">
+        
+        <!-- Subtle Pill Label -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.05] border border-white/10 text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400 mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#DC2626]"></span>
+          COLECCIÓN AUTOMOTRIZ DE ALTA GAMA &bull; ROOSEVELT
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.04]">
+          Vehículos seminuevos <span class="text-zinc-500 font-extrabold">de alta gama.</span>
+        </h1>
+
+        <p class="text-zinc-400 text-sm sm:text-base mt-6 max-w-lg leading-relaxed font-normal">
+          Importación directa de subastas en Estados Unidos. Cada unidad pasa por una exhaustiva verificación Carfax de millaje y revisión técnica de 120 puntos en Calzada Roosevelt.
+        </p>
+
+        <!-- Pill Action Buttons -->
+        <div class="flex flex-wrap items-center gap-3.5 mt-8">
+          <a href="#catalogo" class="bg-white/10 hover:bg-white/15 border border-white/15 text-white text-xs font-bold px-6 py-3 rounded-full flex items-center gap-3 transition-all">
+            <span>EXPLORAR INVENTARIO</span>
+            <div class="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center">
+              <svg class="w-3 h-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+            </div>
+          </a>
+
+          <a href="#financiamiento" class="bg-white hover:bg-zinc-200 text-black text-xs font-extrabold px-6 py-3 rounded-full flex items-center gap-3 transition-all">
+            <span>CALCULAR VISACUOTAS</span>
+            <div class="w-5 h-5 rounded-full bg-black/10 flex items-center justify-center">
+              <svg class="w-3 h-3 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Minimalist Stats Bar -->
+        <div class="grid grid-cols-3 gap-6 pt-10 mt-10 border-t border-white/[0.08] max-w-md">
+          <div>
+            <p class="text-2xl font-black text-white">100%</p>
+            <p class="text-[10px] uppercase font-bold tracking-widest text-zinc-500 mt-0.5">Carfax Limpio</p>
+          </div>
+          <div>
+            <p class="text-2xl font-black text-[#DC2626]">48</p>
+            <p class="text-[10px] uppercase font-bold tracking-widest text-zinc-500 mt-0.5">Visacuotas</p>
+          </div>
+          <div>
+            <p class="text-2xl font-black text-white">120</p>
+            <p class="text-[10px] uppercase font-bold tracking-widest text-zinc-500 mt-0.5">Puntos Revisión</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Luxury Focal Car Showcase (Dark Studio Look) -->
+      <div class="lg:col-span-6 relative flex flex-col items-center">
+        
+        <div class="relative w-full max-w-xl group">
+          <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0B0D11] shadow-2xl">
+            <img 
+              id="hero-car-image"
+              src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=1200&q=85" 
+              alt="Vehículo de alta gama en exhibición Autoventas Duarte" 
+              class="w-full h-80 sm:h-96 object-cover transform group-hover:scale-[1.02] transition-transform duration-700"
+            />
+            
+            <!-- Minimal Spec Badge Overlay -->
+            <div class="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-md border border-white/10 p-4 rounded-2xl flex items-center justify-between">
+              <div>
+                <span id="hero-badge-name" class="text-sm font-black text-white block">Toyota RAV4 XLE 2014 4X4</span>
+                <span id="hero-badge-specs" class="text-[11px] text-zinc-400 block">78,000 mi &bull; Recién Ingresada &bull; Bolsas Intactas</span>
+              </div>
+              <div class="text-right">
+                <span id="hero-badge-price" class="text-lg font-black text-white block">Q 78,500</span>
+                <span class="text-[10px] text-[#DC2626] font-bold block">desde Q1,650/mes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Model Switcher Tabs (Minimalist Dark Glass) -->
+        <div class="mt-5 flex flex-wrap items-center justify-center gap-2">
+          <button onclick="switchHeroCar(0)" class="hero-tab-btn active bg-white/10 border border-white/25 text-white text-xs font-bold px-4 py-2 rounded-xl transition-all">
+            Toyota RAV4 2014
+          </button>
+          <button onclick="switchHeroCar(1)" class="hero-tab-btn bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 text-zinc-400 hover:text-white text-xs font-medium px-4 py-2 rounded-xl transition-all">
+            Mazda CX-5 2017
+          </button>
+          <button onclick="switchHeroCar(4)" class="hero-tab-btn bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 text-zinc-400 hover:text-white text-xs font-medium px-4 py-2 rounded-xl transition-all">
+            Toyota Hilux 4X4 2019
+          </button>
+          <button onclick="switchHeroCar(2)" class="hero-tab-btn bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 text-zinc-400 hover:text-white text-xs font-medium px-4 py-2 rounded-xl transition-all">
+            Honda CR-V 2016
+          </button>
+          <button onclick="switchHeroCar(5)" class="hero-tab-btn bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 text-zinc-400 hover:text-white text-xs font-medium px-4 py-2 rounded-xl transition-all">
+            Honda Civic Turbo
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 4 GARANTÍAS: RECUADROS INDIVIDUALES CUADRADOS ("CUADRADOS POR CADA UNO") -->
+  <!-- ========================================================================= -->
+  <section id="garantias" class="max-w-[1500px] mx-auto px-4 sm:px-8 py-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      
+      <!-- Card 1: Importación Directa -->
+      <div class="bg-[#0B0D11] hover:bg-[#12151C] border border-white/[0.08] hover:border-white/20 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center text-white group-hover:border-[#DC2626] transition-colors">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <span class="text-[10px] font-mono text-zinc-500 font-bold uppercase tracking-widest">[ 01 ]</span>
+          </div>
+          <h3 class="font-extrabold text-base text-white group-hover:text-[#DC2626] transition-colors">Importación Directa</h3>
+          <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+            Sin intermediarios desde subastas en EE.UU. Historial Carfax transparente, millaje real y fotos originales de origen.
+          </p>
+        </div>
+        <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-zinc-500">
+          <span>Subastas EE.UU.</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-zinc-600 group-hover:bg-[#DC2626] transition-colors"></span>
+        </div>
+      </div>
+
+      <!-- Card 2: Garantía Mecánica -->
+      <div class="bg-[#0B0D11] hover:bg-[#12151C] border border-white/[0.08] hover:border-white/20 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center text-[#DC2626] group-hover:border-[#DC2626] transition-colors">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <span class="text-[10px] font-mono text-zinc-500 font-bold uppercase tracking-widest">[ 02 ]</span>
+          </div>
+          <h3 class="font-extrabold text-base text-white group-hover:text-[#DC2626] transition-colors">Garantía Mecánica</h3>
+          <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+            Inspección de 120 puntos: compresión pareja de motor, caja automática certificada, suspensión y bolsas intactas.
+          </p>
+        </div>
+        <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-zinc-500">
+          <span>120 Puntos SAT</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-zinc-600 group-hover:bg-[#DC2626] transition-colors"></span>
+        </div>
+      </div>
+
+      <!-- Card 3: Visacuotas & Bancos -->
+      <div class="bg-[#0B0D11] hover:bg-[#12151C] border border-white/[0.08] hover:border-white/20 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center text-white group-hover:border-[#DC2626] transition-colors">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+              </svg>
+            </div>
+            <span class="text-[10px] font-mono text-zinc-500 font-bold uppercase tracking-widest">[ 03 ]</span>
+          </div>
+          <h3 class="font-extrabold text-base text-white group-hover:text-[#DC2626] transition-colors">Visacuotas & Bancos</h3>
+          <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+            Hasta 48 Visacuotas con Visa y Mastercard sin fiador, o créditos bancarios con precalificación inmediata en 15 minutos.
+          </p>
+        </div>
+        <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-zinc-500">
+          <span>Hasta 48 Meses</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-zinc-600 group-hover:bg-[#DC2626] transition-colors"></span>
+        </div>
+      </div>
+
+      <!-- Card 4: Traspaso Inmediato -->
+      <div class="bg-[#0B0D11] hover:bg-[#12151C] border border-white/[0.08] hover:border-white/20 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center text-emerald-400 group-hover:border-[#DC2626] transition-colors">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <span class="text-[10px] font-mono text-zinc-500 font-bold uppercase tracking-widest">[ 04 ]</span>
+          </div>
+          <h3 class="font-extrabold text-base text-white group-hover:text-[#DC2626] transition-colors">Traspaso Inmediato</h3>
+          <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+            Gestión SAT ágil y transparente. Tu vehículo sale 100% a tu nombre con placas de circulación al día y calcomanía vigente.
+          </p>
+        </div>
+        <div class="mt-6 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-zinc-500">
+          <span>Entrega Lista</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-zinc-600 group-hover:bg-[#DC2626] transition-colors"></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. MOTOR DE BÚSQUEDA Y FILTROS MINIMALISTAS (DARK OBSIDIAN CONSOLE) -->
+  <!-- ========================================================================= -->
+  <section id="filtros" class="max-w-[1500px] mx-auto px-4 sm:px-8 py-12">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+      <div>
+        <span class="text-[10px] font-bold text-[#DC2626] uppercase tracking-[0.25em] block mb-1">
+          [ FILTRO DE BÚSQUEDA PRECISO ]
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+          Filtra tu próximo vehículo
+        </h2>
+      </div>
+      <p class="text-zinc-400 text-xs sm:text-sm max-w-lg leading-relaxed">
+        Cada auto cuenta con fotografías originales de subasta y revisión técnica de 120 puntos disponible para inspección en Calzada Roosevelt.
+      </p>
+    </div>
+
+    <!-- Filter Box Console -->
+    <div class="bg-[#0B0D11] p-6 sm:p-8 rounded-3xl border border-white/[0.08] shadow-2xl">
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <!-- 1. Marca -->
+        <div>
+          <label for="filter-brand" class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1.5">Marca</label>
+          <div class="relative">
+            <select id="filter-brand" class="w-full bg-[#12151C] hover:bg-[#181C26] border border-white/10 text-white font-semibold text-xs rounded-xl px-3.5 py-3 appearance-none focus:outline-none focus:border-[#DC2626] cursor-pointer transition-colors">
+              <option value="all">Todas las marcas</option>
+              <option value="Toyota">Toyota</option>
+              <option value="Mazda">Mazda</option>
+              <option value="Honda">Honda</option>
+              <option value="Kia">Kia</option>
+              <option value="Hyundai">Hyundai</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-zinc-400">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Tipo -->
+        <div>
+          <label for="filter-type" class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1.5">Carrocería</label>
+          <div class="relative">
+            <select id="filter-type" class="w-full bg-[#12151C] hover:bg-[#181C26] border border-white/10 text-white font-semibold text-xs rounded-xl px-3.5 py-3 appearance-none focus:outline-none focus:border-[#DC2626] cursor-pointer transition-colors">
+              <option value="all">Todos los tipos</option>
+              <option value="SUV">SUV / Camioneta</option>
+              <option value="Sedán">Sedán</option>
+              <option value="Pickup">Pickup</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-zinc-400">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Rango de Año -->
+        <div>
+          <label for="filter-year" class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1.5">Año</label>
+          <div class="relative">
+            <select id="filter-year" class="w-full bg-[#12151C] hover:bg-[#181C26] border border-white/10 text-white font-semibold text-xs rounded-xl px-3.5 py-3 appearance-none focus:outline-none focus:border-[#DC2626] cursor-pointer transition-colors">
+              <option value="all">Todos los años (2012 - 2025)</option>
+              <option value="2018-2025">2018 - 2025</option>
+              <option value="2016-2017">2016 - 2017</option>
+              <option value="2014-2015">2014 - 2015</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-zinc-400">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Transmisión -->
+        <div>
+          <label for="filter-transmission" class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1.5">Transmisión</label>
+          <div class="relative">
+            <select id="filter-transmission" class="w-full bg-[#12151C] hover:bg-[#181C26] border border-white/10 text-white font-semibold text-xs rounded-xl px-3.5 py-3 appearance-none focus:outline-none focus:border-[#DC2626] cursor-pointer transition-colors">
+              <option value="all">Todas las transmisiones</option>
+              <option value="Automática">Automática</option>
+              <option value="Mecánica">Mecánica</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-zinc-400">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Tracción -->
+        <div>
+          <label for="filter-drive" class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1.5">Tracción</label>
+          <div class="relative">
+            <select id="filter-drive" class="w-full bg-[#12151C] hover:bg-[#181C26] border border-white/10 text-white font-semibold text-xs rounded-xl px-3.5 py-3 appearance-none focus:outline-none focus:border-[#DC2626] cursor-pointer transition-colors">
+              <option value="all">Todas las tracciones</option>
+              <option value="4x4">4x4 / AWD (Tracción Total)</option>
+              <option value="4x2">4x2</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-zinc-400">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Presupuesto -->
+        <div>
+          <label for="filter-price" class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1.5">Presupuesto Máximo</label>
+          <div class="relative">
+            <select id="filter-price" class="w-full bg-[#12151C] hover:bg-[#181C26] border border-white/10 text-white font-semibold text-xs rounded-xl px-3.5 py-3 appearance-none focus:outline-none focus:border-[#DC2626] cursor-pointer transition-colors">
+              <option value="all">Cualquier presupuesto</option>
+              <option value="70000">Hasta Q70,000</option>
+              <option value="85000">Hasta Q85,000</option>
+              <option value="100000">Hasta Q100,000</option>
+              <option value="999999">+Q100,000</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-zinc-400">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Origen -->
+        <div>
+          <label for="filter-status" class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1.5">Origen / Estado</label>
+          <div class="relative">
+            <select id="filter-status" class="w-full bg-[#12151C] hover:bg-[#181C26] border border-white/10 text-white font-semibold text-xs rounded-xl px-3.5 py-3 appearance-none focus:outline-none focus:border-[#DC2626] cursor-pointer transition-colors">
+              <option value="all">Todos los orígenes</option>
+              <option value="Recién Ingresado">Recién Ingresado (EE.UU.)</option>
+              <option value="De Agencia">De Agencia (Guatemala)</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-zinc-400">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Modalidad de Pago -->
+        <div>
+          <label for="filter-payment" class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1.5">Modalidad de Pago</label>
+          <div class="relative">
+            <select id="filter-payment" class="w-full bg-[#12151C] hover:bg-[#181C26] border border-white/10 text-white font-semibold text-xs rounded-xl px-3.5 py-3 appearance-none focus:outline-none focus:border-[#DC2626] cursor-pointer transition-colors">
+              <option value="all">Todas las opciones</option>
+              <option value="Contado">Contado / Transferencia</option>
+              <option value="Financiamiento">Visacuotas / Financiamiento</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-zinc-400">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Resumen Dinámico y Botones -->
+      <div class="mt-6 pt-5 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2 text-xs text-zinc-400">
+          <span class="w-2 h-2 rounded-full bg-[#DC2626]"></span>
+          <span id="filter-summary-text">
+            Mostrando: <strong class="text-white font-bold">Todos los vehículos disponibles [8]</strong>
+          </span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button id="btn-reset-filters" type="button" class="text-xs font-bold text-zinc-500 hover:text-white px-3 py-2 transition-colors">
+            Restablecer
+          </button>
+          
+          <a href="#catalogo" id="btn-apply-filter" class="bg-white hover:bg-zinc-200 text-black text-xs font-extrabold px-6 py-2.5 rounded-full transition-all flex items-center gap-2">
+            <span>VER RESULTADOS</span>
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 3. CATÁLOGO DE VEHÍCULOS: COLECCIÓN LUXURY MINIMALISTA -->
+  <!-- ========================================================================= -->
+  <section id="catalogo" class="max-w-[1500px] mx-auto px-4 sm:px-8 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Columna Izquierda: Filtros Rápidos Minimalistas -->
+      <aside class="lg:col-span-4 xl:col-span-3">
+        <div class="bg-[#0B0D11] p-6 rounded-3xl border border-white/[0.08] sticky top-24">
+          <span class="text-[10px] font-bold text-[#DC2626] uppercase tracking-[0.2em] block">
+            [ SEDE ROOSEVELT ]
+          </span>
+          <h2 class="text-2xl font-black text-white tracking-tight mt-1">
+            Colección Disponible
+          </h2>
+          <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+            Vehículos en exhibición física listos para entrega inmediata con placas SAT y traspaso listo.
+          </p>
+
+          <!-- Píldoras de Filtro Rápido -->
+          <div class="mt-6 flex flex-wrap lg:flex-col gap-2">
+            <button type="button" data-quick-filter="all" class="quick-pill active text-left px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center justify-between bg-white text-black">
+              <span>Todos los Vehículos</span>
+              <span class="w-5 h-5 rounded-full bg-black/10 text-[10px] flex items-center justify-center font-bold">8</span>
+            </button>
+
+            <button type="button" data-quick-filter="4x4" class="quick-pill text-left px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center justify-between bg-[#12151C] text-zinc-300 hover:text-white border border-white/5">
+              <span>Camionetas 4X4 / AWD</span>
+              <span class="w-5 h-5 rounded-full bg-white/10 text-[10px] flex items-center justify-center font-bold">4</span>
+            </button>
+
+            <button type="button" data-quick-filter="recientes" class="quick-pill text-left px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center justify-between bg-[#12151C] text-zinc-300 hover:text-white border border-white/5">
+              <span>Recién Ingresados</span>
+              <span class="w-5 h-5 rounded-full bg-white/10 text-[10px] flex items-center justify-center font-bold">7</span>
+            </button>
+
+            <button type="button" data-quick-filter="low-mileage" class="quick-pill text-left px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center justify-between bg-[#12151C] text-zinc-300 hover:text-white border border-white/5">
+              <span>Menos de 80,000 mi</span>
+              <span class="w-5 h-5 rounded-full bg-white/10 text-[10px] flex items-center justify-center font-bold">6</span>
+            </button>
+          </div>
+
+          <!-- Minimalist Trade-In Note -->
+          <div class="mt-6 pt-5 border-t border-white/[0.08]">
+            <span class="text-xs font-bold text-white block">Inspección de tu mecánico</span>
+            <p class="text-xs text-zinc-400 mt-1 leading-relaxed">
+              Disponemos de rampa de elevación para revisión de chasis, tren delantero y escaneo de computadora.
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Columna Derecha: Tarjetas de Autos en Luxury Dark Obsidian -->
+      <main class="lg:col-span-8 xl:col-span-9">
+        
+        <div class="flex items-center justify-between mb-6 px-1">
+          <p class="text-xs font-bold text-zinc-400 uppercase tracking-wider">
+            Mostrando <span id="catalog-counter" class="text-white font-extrabold">8 vehículos</span> verificados
+          </p>
+          <span class="text-xs text-zinc-500">Haz clic en cualquier vehículo para ver su galería</span>
+        </div>
+
+        <!-- Cards Grid -->
+        <div id="catalog-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Dynamically Rendered by JS -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="catalog-empty-state" class="hidden bg-[#0B0D11] rounded-3xl p-10 text-center border border-white/10">
+          <div class="w-12 h-12 rounded-full bg-white/5 text-zinc-400 flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-black text-white">No encontramos unidades con este filtro</h3>
+          <p class="text-xs text-zinc-400 mt-1 max-w-sm mx-auto">
+            Prueba ajustando el presupuesto o la carrocería. También podemos cotizarte bajo pedido directo desde subasta.
+          </p>
+          <button onclick="resetAllFilters()" class="mt-4 bg-white hover:bg-zinc-200 text-black px-5 py-2 rounded-full font-bold text-xs transition-colors">
+            Restablecer Filtros
+          </button>
+        </div>
+
+      </main>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 4. CALCULADORA MINIMALISTA DE VISACUOTAS & RESERVA ROOSEVELT -->
+  <!-- ========================================================================= -->
+  <section id="financiamiento" class="max-w-[1500px] mx-auto px-4 sm:px-8 py-16">
+    <div class="bg-[#0B0D11] rounded-3xl p-6 sm:p-10 md:p-12 border border-white/[0.08] shadow-2xl">
+      
+      <div class="max-w-2xl mb-10">
+        <span class="text-[10px] font-bold text-[#DC2626] uppercase tracking-[0.25em] block mb-1">
+          [ SIMULADOR DE VISACUOTAS ]
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+          Calcula tu cuota y agenda tu prueba
+        </h2>
+        <p class="text-zinc-400 text-xs sm:text-sm mt-2">
+          Personaliza tu enganche en Quetzales y agenda tu cita en nuestra sede de <strong class="text-white">Calzada Roosevelt 7-24 Zona 2, Mixco</strong>.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Izquierda: Parámetros del Crédito -->
+        <div class="lg:col-span-6 bg-[#12151C] p-6 sm:p-8 rounded-2xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-6">
+              <span class="text-xs font-bold uppercase tracking-wider text-white">1. Parámetros de la Cuota</span>
+              <span class="text-xs text-emerald-400 font-semibold">Sin fiador con Visacuotas</span>
+            </div>
+
+            <!-- Selector de Auto -->
+            <div class="mb-5">
+              <label for="calc-vehicle-select" class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1.5">
+                Vehículo Seleccionado
+              </label>
+              <div class="relative">
+                <select id="calc-vehicle-select" class="w-full bg-[#080A0E] border border-white/10 text-white font-bold text-xs sm:text-sm rounded-xl px-3.5 py-3 appearance-none focus:outline-none focus:border-[#DC2626] cursor-pointer">
+                  <!-- Populated by JS -->
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-zinc-400">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mini Preview -->
+            <div class="mb-5 bg-[#080A0E] p-3.5 rounded-xl border border-white/5 flex items-center gap-3">
+              <img id="calc-car-thumb" src="" alt="Auto seleccionado" class="w-16 h-12 object-cover rounded-lg border border-white/10 shrink-0">
+              <div class="overflow-hidden">
+                <h4 id="calc-car-title" class="text-xs font-black text-white truncate">Toyota RAV4 XLE 2014 4X4</h4>
+                <p class="text-xs text-zinc-400">Precio de Contado: <span id="calc-car-cash-price" class="text-white font-extrabold">Q78,500</span></p>
+              </div>
+            </div>
+
+            <!-- Slider Enganche -->
+            <div class="mb-5">
+              <div class="flex items-center justify-between mb-1.5">
+                <label for="calc-downpayment-slider" class="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">
+                  Enganche Inicial
+                </label>
+                <div>
+                  <span id="calc-downpayment-display" class="text-sm font-black text-white">Q 15,700</span>
+                  <span id="calc-downpayment-percent" class="text-xs text-[#DC2626] font-bold ml-1">(20%)</span>
+                </div>
+              </div>
+              <input id="calc-downpayment-slider" type="range" min="15" max="60" step="5" value="20" class="w-full">
+              <div class="flex justify-between text-[9px] text-zinc-500 font-bold mt-1">
+                <span>Mín. 15%</span>
+                <span>30%</span>
+                <span>45%</span>
+                <span>Máx. 60%</span>
+              </div>
+            </div>
+
+            <!-- Selector de Plazo -->
+            <div class="mb-5">
+              <label class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1.5">
+                Plazo en Meses
+              </label>
+              <div class="grid grid-cols-4 gap-2">
+                <button type="button" data-term="12" class="calc-term-btn py-2.5 rounded-xl font-bold text-xs border border-white/10 bg-[#080A0E] text-zinc-400 hover:text-white transition-colors">12 Meses</button>
+                <button type="button" data-term="24" class="calc-term-btn py-2.5 rounded-xl font-bold text-xs border border-white/10 bg-[#080A0E] text-zinc-400 hover:text-white transition-colors">24 Meses</button>
+                <button type="button" data-term="36" class="calc-term-btn py-2.5 rounded-xl font-bold text-xs border border-white/10 bg-[#080A0E] text-zinc-400 hover:text-white transition-colors">36 Meses</button>
+                <button type="button" data-term="48" class="calc-term-btn active py-2.5 rounded-xl font-bold text-xs border border-[#DC2626] bg-[#DC2626] text-white transition-colors">48 Meses</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cuota Mensual Result Box -->
+          <div class="bg-[#080A0E] p-4 rounded-xl border border-white/5">
+            <span class="text-[11px] text-zinc-400 block">Cuota mensual estimada con Visacuotas:</span>
+            <div class="flex items-baseline gap-2 mt-1">
+              <span id="calc-monthly-installment" class="text-3xl font-black text-white tracking-tight">Q 1,650</span>
+              <span class="text-xs text-zinc-500">/ mes</span>
+            </div>
+            <div class="flex justify-between text-xs text-zinc-400 pt-3 mt-3 border-t border-white/5">
+              <span>Saldo a financiar: <strong id="calc-financed-amount" class="text-white">Q 62,800</strong></span>
+              <span>Plazo: <strong id="calc-term-summary" class="text-white">48 meses</strong></span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Derecha: Agendamiento en Roosevelt -->
+        <div class="lg:col-span-6 bg-[#12151C] p-6 sm:p-8 rounded-2xl border border-white/5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-6">
+              <span class="text-xs font-bold uppercase tracking-wider text-white">2. Agenda tu Prueba de Manejo</span>
+              <span class="text-xs text-zinc-400">Sede Roosevelt 7-24</span>
+            </div>
+
+            <!-- Selector de Fecha: 14 días desde Oct 2026 -->
+            <div class="mb-5">
+              <div class="flex items-center justify-between mb-1.5">
+                <label class="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">
+                  Día de la Visita (Oct - Nov 2026)
+                </label>
+                <span id="selected-date-label" class="text-xs font-bold text-[#DC2626]">Mar 27 de Octubre</span>
+              </div>
+              <div id="date-picker-container" class="flex gap-2 overflow-x-auto pb-2 scrollbar-none">
+                <!-- Injected by JS -->
+              </div>
+            </div>
+
+            <!-- Horarios -->
+            <div class="mb-5">
+              <label class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1.5">
+                Horario Disponible
+              </label>
+              <div class="grid grid-cols-3 sm:grid-cols-5 gap-2">
+                <button type="button" data-time="09:00 AM" class="time-slot-btn py-2 rounded-xl font-bold text-xs border border-white/10 bg-[#080A0E] text-zinc-400 hover:text-white transition-colors">09:00 AM</button>
+                <button type="button" data-time="11:00 AM" class="time-slot-btn active py-2 rounded-xl font-bold text-xs border border-white bg-white text-black transition-colors">11:00 AM</button>
+                <button type="button" data-time="02:00 PM" class="time-slot-btn py-2 rounded-xl font-bold text-xs border border-white/10 bg-[#080A0E] text-zinc-400 hover:text-white transition-colors">02:00 PM</button>
+                <button type="button" data-time="04:00 PM" class="time-slot-btn py-2 rounded-xl font-bold text-xs border border-white/10 bg-[#080A0E] text-zinc-400 hover:text-white transition-colors">04:00 PM</button>
+                <button type="button" data-time="05:30 PM" class="time-slot-btn py-2 rounded-xl font-bold text-xs border border-white/10 bg-[#080A0E] text-zinc-400 hover:text-white transition-colors">05:30 PM</button>
+              </div>
+            </div>
+
+            <!-- Campos Nombre y WhatsApp -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
+              <div>
+                <label for="client-name" class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1">Nombre Completo</label>
+                <input id="client-name" type="text" placeholder="Ej. Carlos Morales" class="w-full bg-[#080A0E] border border-white/10 text-white text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-[#DC2626]">
+              </div>
+              <div>
+                <label for="client-phone" class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1">Número de WhatsApp</label>
+                <input id="client-phone" type="tel" placeholder="Ej. 5555-1234" class="w-full bg-[#080A0E] border border-white/10 text-white text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-[#DC2626]">
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón Rojo Sólido (Sin Brillos de IA) -->
+          <button id="btn-submit-whatsapp" type="button" class="w-full bg-[#DC2626] hover:bg-[#B91C1C] text-white text-xs sm:text-sm font-bold py-3.5 px-5 rounded-xl flex items-center justify-center gap-2 transition-colors">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            <span>Confirmar Cita y Enviar a WhatsApp (5717-5666)</span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 5. PREGUNTAS FRECUENTES (MINIMALIST DARK ACCORDION) -->
+  <!-- ========================================================================= -->
+  <section id="faq" class="max-w-[1500px] mx-auto px-4 sm:px-8 py-20 relative">
+    
+    <!-- Ambient Liquid Glass Glow Blobs (Fondo Refractivo Líquido) -->
+    <div class="absolute -top-16 left-12 w-80 h-80 rounded-full bg-[#DC2626]/12 blur-[110px] pointer-events-none animate-liquid-blob"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-blue-500/[0.04] blur-[130px] pointer-events-none animate-liquid-blob" style="animation-delay: -4s;"></div>
+
+    <!-- Section Header -->
+    <div class="max-w-2xl mb-12 relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full liquid-glass mb-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] animate-pulse"></span>
+        <span class="text-[10px] font-mono font-bold text-white uppercase tracking-[0.25em]">
+          TRANSPARENCIA TOTAL &bull; LIQUID GLASS
+        </span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+        Preguntas Frecuentes
+      </h2>
+      <p class="text-zinc-400 text-xs sm:text-sm mt-2 leading-relaxed">
+        Garantías técnicas, inspección de subasta Carfax en EE.UU., financiamiento bancario y trámites aduanales ante la SAT en Guatemala.
+      </p>
+    </div>
+
+    <!-- Liquid Glass Accordion Container -->
+    <div class="space-y-4 relative z-10">
+      
+      <!-- FAQ ITEM 1 -->
+      <div id="faq-card-1" class="liquid-glass liquid-glass-active rounded-2xl overflow-hidden transition-all duration-500">
+        <button onclick="toggleFaq(1)" type="button" class="w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-white transition-colors group">
+          <div class="flex items-center gap-3.5 sm:gap-4">
+            <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-white/[0.06] border border-white/10 text-[11px] font-mono font-bold text-[#DC2626] flex items-center justify-center shrink-0 group-hover:border-[#DC2626]/40 transition-colors shadow-inner">
+              01
+            </span>
+            <span class="group-hover:text-white transition-colors">¿Cómo garantizan el estado real de los autos importados de EE.UU.?</span>
+          </div>
+          <div id="faq-btn-badge-1" class="w-8 h-8 rounded-full bg-[#DC2626] text-white border border-transparent flex items-center justify-center shrink-0 transition-all duration-500 shadow-md">
+            <svg id="faq-icon-1" class="w-4 h-4 transform rotate-180 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+          </div>
+        </button>
+        <div id="faq-collapse-1" class="grid grid-rows-[1fr] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+          <div class="overflow-hidden">
+            <div class="px-6 sm:px-7 pb-6 pt-1 text-xs sm:text-sm text-zinc-300 leading-relaxed border-t border-white/[0.06] bg-gradient-to-b from-white/[0.02] to-transparent">
+              <p class="mb-4">
+                Cada vehículo en Autoventas Duarte cuenta con su reporte Carfax oficial completo que audita el historial de dueños anteriores en EE.UU., servicios periódicos en concesionarios oficiales y certificación de millaje en odómetro. Además, te entregamos las fotografías originales de subasta (Copart/Manheim) antes de importar y ejecutamos una inspección de 120 puntos (compresión de motor cilindro por cilindro, caja automática y suspensión).
+              </p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] text-zinc-300 font-medium">Bolsas de Aire 100% Intactas</span>
+                <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] text-zinc-300 font-medium">Historial Carfax Verificable</span>
+                <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] text-[#DC2626] font-bold">Fotos Reales de Subasta USA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM 2 -->
+      <div id="faq-card-2" class="liquid-glass rounded-2xl overflow-hidden transition-all duration-500">
+        <button onclick="toggleFaq(2)" type="button" class="w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-white transition-colors group">
+          <div class="flex items-center gap-3.5 sm:gap-4">
+            <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-white/[0.06] border border-white/10 text-[11px] font-mono font-bold text-[#DC2626] flex items-center justify-center shrink-0 group-hover:border-[#DC2626]/40 transition-colors shadow-inner">
+              02
+            </span>
+            <span class="group-hover:text-white transition-colors">¿Puedo llevar a mi mecánico de confianza a la sede en Calzada Roosevelt?</span>
+          </div>
+          <div id="faq-btn-badge-2" class="w-8 h-8 rounded-full bg-white/[0.06] border border-white/10 text-zinc-400 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:text-white group-hover:bg-white/[0.1]">
+            <svg id="faq-icon-2" class="w-4 h-4 transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+          </div>
+        </button>
+        <div id="faq-collapse-2" class="grid grid-rows-[0fr] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+          <div class="overflow-hidden">
+            <div class="px-6 sm:px-7 pb-6 pt-1 text-xs sm:text-sm text-zinc-300 leading-relaxed border-t border-white/[0.06] bg-gradient-to-b from-white/[0.02] to-transparent">
+              <p class="mb-4">
+                Totalmente bienvenidos. Fomentamos la absoluta transparencia con nuestros clientes. Puedes asistir con tu mecánico de cabecera con escáner computarizado OBD2. Ponemos a tu disposición nuestra rampa hidráulica bajo techo para inspección de chasis, tren delantero, caja y compresión de motor antes de dar cualquier anticipo.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] text-zinc-300 font-medium">Rampa Hidráulica Disponible</span>
+                <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] text-zinc-300 font-medium">Escaneo Computarizado OBD2</span>
+                <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] text-[#DC2626] font-bold">Prueba de Manejo en Roosevelt</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM 3 -->
+      <div id="faq-card-3" class="liquid-glass rounded-2xl overflow-hidden transition-all duration-500">
+        <button onclick="toggleFaq(3)" type="button" class="w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-white transition-colors group">
+          <div class="flex items-center gap-3.5 sm:gap-4">
+            <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-white/[0.06] border border-white/10 text-[11px] font-mono font-bold text-[#DC2626] flex items-center justify-center shrink-0 group-hover:border-[#DC2626]/40 transition-colors shadow-inner">
+              03
+            </span>
+            <span class="group-hover:text-white transition-colors">¿Cómo funciona el pago con Visacuotas y qué tarjetas aplican?</span>
+          </div>
+          <div id="faq-btn-badge-3" class="w-8 h-8 rounded-full bg-white/[0.06] border border-white/10 text-zinc-400 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:text-white group-hover:bg-white/[0.1]">
+            <svg id="faq-icon-3" class="w-4 h-4 transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+          </div>
+        </button>
+        <div id="faq-collapse-3" class="grid grid-rows-[0fr] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+          <div class="overflow-hidden">
+            <div class="px-6 sm:px-7 pb-6 pt-1 text-xs sm:text-sm text-zinc-300 leading-relaxed border-t border-white/[0.06] bg-gradient-to-b from-white/[0.02] to-transparent">
+              <p class="mb-4">
+                Aceptamos tarjetas de crédito Visa y Mastercard de todos los emisores en Guatemala (Banco Industrial, BAC, BAM, Banrural, G&T Continental y Promerica). Puedes financiar el enganche inicial fraccionado o el valor total del auto en plazos de 12, 18, 24, 36 o 48 cuotas sin requerir fiador ni presentar estados de cuenta.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] text-zinc-300 font-medium">12 a 48 Visacuotas</span>
+                <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] text-zinc-300 font-medium">Visa & Mastercard</span>
+                <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] text-[#DC2626] font-bold">Sin Fiador ni Papeleos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM 4 -->
+      <div id="faq-card-4" class="liquid-glass rounded-2xl overflow-hidden transition-all duration-500">
+        <button onclick="toggleFaq(4)" type="button" class="w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-white transition-colors group">
+          <div class="flex items-center gap-3.5 sm:gap-4">
+            <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-white/[0.06] border border-white/10 text-[11px] font-mono font-bold text-[#DC2626] flex items-center justify-center shrink-0 group-hover:border-[#DC2626]/40 transition-colors shadow-inner">
+              04
+            </span>
+            <span class="group-hover:text-white transition-colors">¿Cómo se realiza el traspaso legal ante la SAT?</span>
+          </div>
+          <div id="faq-btn-badge-4" class="w-8 h-8 rounded-full bg-white/[0.06] border border-white/10 text-zinc-400 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:text-white group-hover:bg-white/[0.1]">
+            <svg id="faq-icon-4" class="w-4 h-4 transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+          </div>
+        </button>
+        <div id="faq-collapse-4" class="grid grid-rows-[0fr] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+          <div class="overflow-hidden">
+            <div class="px-6 sm:px-7 pb-6 pt-1 text-xs sm:text-sm text-zinc-300 leading-relaxed border-t border-white/[0.06] bg-gradient-to-b from-white/[0.02] to-transparent">
+              <p class="mb-4">
+                Gestionamos el traspaso electrónico inmediato ante la SAT el mismo día de la entrega del vehículo. Nuestros abogados tramitan el traspaso digital en el portal SAT Declaraguate y te entregamos el Título Electrónico emitido a tu nombre, Tarjeta de Circulación digital con QR legal y constancia de póliza aduanal liquidada.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] text-zinc-300 font-medium">Traspaso Inmediato Electrónico</span>
+                <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] text-zinc-300 font-medium">Título a tu Nombre</span>
+                <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] text-[#DC2626] font-bold">Impuesto IPRIMA y Póliza Pagada</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM 5 -->
+      <div id="faq-card-5" class="liquid-glass rounded-2xl overflow-hidden transition-all duration-500">
+        <button onclick="toggleFaq(5)" type="button" class="w-full text-left p-6 sm:p-7 flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-white transition-colors group">
+          <div class="flex items-center gap-3.5 sm:gap-4">
+            <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-white/[0.06] border border-white/10 text-[11px] font-mono font-bold text-[#DC2626] flex items-center justify-center shrink-0 group-hover:border-[#DC2626]/40 transition-colors shadow-inner">
+              05
+            </span>
+            <span class="group-hover:text-white transition-colors">¿Aceptan mi vehículo actual como parte de pago (Trade-in)?</span>
+          </div>
+          <div id="faq-btn-badge-5" class="w-8 h-8 rounded-full bg-white/[0.06] border border-white/10 text-zinc-400 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:text-white group-hover:bg-white/[0.1]">
+            <svg id="faq-icon-5" class="w-4 h-4 transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+          </div>
+        </button>
+        <div id="faq-collapse-5" class="grid grid-rows-[0fr] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+          <div class="overflow-hidden">
+            <div class="px-6 sm:px-7 pb-6 pt-1 text-xs sm:text-sm text-zinc-300 leading-relaxed border-t border-white/[0.06] bg-gradient-to-b from-white/[0.02] to-transparent">
+              <p class="mb-4">
+                Sí. Puedes traer tu vehículo actual a nuestra sede en Calzada Roosevelt 7-24 Zona 2, Mixco. Nuestros valuadores realizan la tasación comercial técnica en menos de 20 minutos y el monto acordado se abona directamente como enganche inicial de tu nuevo vehículo importado.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] text-zinc-300 font-medium">Avalúo Rápido en 20 Minutos</span>
+                <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] text-zinc-300 font-medium">Todas las Marcas y Modelos</span>
+                <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] text-[#DC2626] font-bold">Abono Directo a tu Enganche</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 6. COMENTARIOS Y TESTIMONIOS -->
+  <!-- ========================================================================= -->
+  <section id="testimonios" class="max-w-[1500px] mx-auto px-4 sm:px-8 py-16">
+    
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="text-[10px] font-bold text-[#DC2626] uppercase tracking-[0.25em] block mb-1">
+        [ CLIENTES SATISFECHOS ]
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+        Respaldados por más de 1,200 familias
+      </h2>
+      <p class="text-zinc-400 text-xs sm:text-sm mt-2">
+        La confianza en el mercado automotriz se demuestra con hechos verificables.
+      </p>
+    </div>
+
+    <!-- Grid 2 filas x 3 columnas -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Review 1 -->
+      <div class="bg-[#0B0D11] p-6 sm:p-8 rounded-3xl border border-white/10 flex flex-col justify-between">
+        <div>
+          <!-- 5 Red Stars SVG -->
+          <div class="flex items-center gap-1 mb-4 text-[#DC2626]">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+            "Compré la RAV4 2014 en su sede de Calzada Roosevelt. Me mostraron el Carfax y las fotos de la subasta antes de subirla al barco. Llevé a mi mecánico y revisó la compresión frente a mí. Excelente atención y las Visacuotas facilitaron todo."
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Cliente Duarte" class="w-10 h-10 rounded-full object-cover border border-white/20">
+          <div>
+            <h4 class="font-extrabold text-xs text-white">Carlos Mendoza</h4>
+            <p class="text-[11px] text-zinc-500">Toyota RAV4 XLE 2014 &bull; Mixco</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="bg-[#0B0D11] p-6 sm:p-8 rounded-3xl border border-white/10 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-1 mb-4 text-[#DC2626]">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+            "En otros predios me daba desconfianza el estado de las bolsas de aire. En Autoventas Duarte las bolsas estaban intactas de fábrica. El traspaso me salió listo en 24 horas a mi nombre. Los recomiendo con los ojos cerrados."
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Cliente Duarte" class="w-10 h-10 rounded-full object-cover border border-white/20">
+          <div>
+            <h4 class="font-extrabold text-xs text-white">Ing. Roberto Estrada</h4>
+            <p class="text-[11px] text-zinc-500">Mazda CX-5 GT 2017 &bull; Zona 10</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="bg-[#0B0D11] p-6 sm:p-8 rounded-3xl border border-white/10 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-1 mb-4 text-[#DC2626]">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+            "Buscaba una camioneta para mi familia pero no quería arriesgar mis ahorros. Probé la Honda CR-V sobre la Roosevelt y el manejo era impecable. Me recibieron mi sedán anterior a buen precio. Trato de caballeros."
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Cliente Duarte" class="w-10 h-10 rounded-full object-cover border border-white/20">
+          <div>
+            <h4 class="font-extrabold text-xs text-white">Dra. Mariana Gómez</h4>
+            <p class="text-[11px] text-zinc-500">Honda CR-V EX-L 2016 &bull; San Cristóbal</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="bg-[#0B0D11] p-6 sm:p-8 rounded-3xl border border-white/10 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-1 mb-4 text-[#DC2626]">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+            "Viajé desde Quetzaltenango a comprar una Toyota Hilux 4x4. Me enviaron fotos del motor, chasis y récord de servicios antes de viajar. Todo coincidió al 100% al llegar. Empresa formal y seria."
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=120&q=80" alt="Cliente Duarte" class="w-10 h-10 rounded-full object-cover border border-white/20">
+          <div>
+            <h4 class="font-extrabold text-xs text-white">Lic. Fernando Morales</h4>
+            <p class="text-[11px] text-zinc-500">Toyota Hilux 4X4 SRV &bull; Quetzaltenango</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 5 -->
+      <div class="bg-[#0B0D11] p-6 sm:p-8 rounded-3xl border border-white/10 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-1 mb-4 text-[#DC2626]">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+            "Compré un Honda Civic Turbo 2017. Súper económico y en excelente estado estético y mecánico. Pagué una parte con Visacuotas y el resto al contado. En 40 minutos ya estaba firmado el traspaso."
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Cliente Duarte" class="w-10 h-10 rounded-full object-cover border border-white/20">
+          <div>
+            <h4 class="font-extrabold text-xs text-white">Sofía de León</h4>
+            <p class="text-[11px] text-zinc-500">Honda Civic EX Turbo &bull; Carretera a El Salvador</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 6 -->
+      <div class="bg-[#0B0D11] p-6 sm:p-8 rounded-3xl border border-white/10 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-1 mb-4 text-[#DC2626]">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+            "Excelente trato en su predio sobre la Roosevelt. Tienen amplio parqueo cerrado y me tuvieron el carro listo con servicio de aceite recién hecho. La Sportage ha salido buenísima."
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=120&q=80" alt="Cliente Duarte" class="w-10 h-10 rounded-full object-cover border border-white/20">
+          <div>
+            <h4 class="font-extrabold text-xs text-white">Alejandro Castillo</h4>
+            <p class="text-[11px] text-zinc-500">Kia Sportage LX 2018 &bull; Mixco</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 7. SEDE OFICIAL & MAPA RADAR CIRCULAR DE $10,000 (CALZADA ROOSEVELT) -->
+  <!-- ========================================================================= -->
+  <section id="ubicacion" class="max-w-[1500px] mx-auto px-4 sm:px-8 py-20 relative">
+    
+    <!-- Ambient Liquid Glow -->
+    <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 rounded-full bg-[#DC2626]/10 blur-[130px] pointer-events-none"></div>
+
+    <div class="liquid-glass rounded-3xl p-6 sm:p-10 md:p-12 relative overflow-hidden">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        
+        <!-- Left Column: Location Info, Real-time Arrival & Direct Navigation Links -->
+        <div class="lg:col-span-6 relative z-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.06] border border-white/10 mb-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#DC2626]"></span>
+            <span class="text-[10px] font-mono font-bold text-white uppercase tracking-[0.25em]">
+              SEDE CENTRAL DUARTE &bull; GUATEMALA
+            </span>
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+            Sede Calzada Roosevelt
+          </h2>
+          <p class="text-zinc-400 text-xs sm:text-sm mt-3 leading-relaxed">
+            Instalaciones privadas con amplio parqueo bajo techo, rampa hidráulica para que traigas a tu mecánico a revisar el chasis y sala VIP en Calzada Roosevelt 7-24 Zona 2, Mixco, Guatemala.
+          </p>
+
+          <!-- Specifications Grid -->
+          <div class="mt-6 space-y-3 text-xs">
+            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-start gap-3">
+              <div class="w-7 h-7 rounded-lg bg-[#DC2626]/20 border border-[#DC2626]/30 flex items-center justify-center shrink-0 text-[#DC2626]">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <span class="text-zinc-400 block text-[11px]">Dirección Oficial:</span>
+                <strong class="text-white text-xs sm:text-sm">Calzada Roosevelt 7-24 Zona 2, Mixco, Guatemala</strong>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-start gap-3">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center shrink-0 text-emerald-400">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/></svg>
+              </div>
+              <div>
+                <span class="text-zinc-400 block text-[11px]">Horario de Atención:</span>
+                <strong class="text-white text-xs">Lunes a Viernes: 8:00 AM - 6:00 PM &bull; Sábado: 8:30 AM - 4:00 PM</strong>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-start gap-3">
+              <div class="w-7 h-7 rounded-lg bg-blue-500/20 border border-blue-500/30 flex items-center justify-center shrink-0 text-blue-400">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <span class="text-zinc-400 block text-[11px]">Atención Personalizada PBX / WhatsApp:</span>
+                <strong class="text-white text-xs">5717-5666 (Asesoría directa en sala)</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tiempos de Llegada Estimados en Vivo -->
+          <div class="mt-5 pt-4 border-t border-white/[0.08]">
+            <span class="text-[10px] font-mono font-bold text-zinc-400 uppercase tracking-widest block mb-2.5">
+              TIEMPOS DE TRASLADO ESTIMADOS:
+            </span>
+            <div class="grid grid-cols-3 gap-2 text-center">
+              <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                <span class="text-[10px] text-zinc-400 block">Miraflores Z11</span>
+                <span class="text-xs font-black text-white">~4 min</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                <span class="text-[10px] text-zinc-400 block">El Trébol Z12</span>
+                <span class="text-xs font-black text-white">~8 min</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                <span class="text-[10px] text-zinc-400 block">San Lucas Sac.</span>
+                <span class="text-xs font-black text-white">~14 min</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap gap-3 mt-8">
+            <a href="https://maps.google.com/?q=Calzada+Roosevelt+7-24+Zona+2+Mixco+Guatemala" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-zinc-200 text-black px-6 py-3.5 rounded-full font-extrabold text-xs flex items-center gap-2 transition-all shadow-lg">
+              <span>ABRIR EN GOOGLE MAPS</span>
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" /></svg>
+            </a>
+            <a href="https://waze.com/ul?q=Calzada+Roosevelt+7-24+Zona+2+Mixco" target="_blank" rel="noopener noreferrer" class="liquid-glass hover:bg-white/10 text-white px-6 py-3.5 rounded-full font-bold text-xs flex items-center gap-2 transition-all">
+              <span>ABRIR EN WAZE</span>
+              <svg class="w-3.5 h-3.5 text-[#DC2626]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8M8 12h8"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: MAPA CIRCULAR DE $10,000 CON GOOGLE MAPS REAL -->
+        <div class="lg:col-span-6 flex flex-col items-center justify-center relative">
+          
+          <!-- Outer Liquid Glass Bezel Ring -->
+          <div class="relative w-72 h-72 sm:w-88 sm:h-88 md:w-[420px] md:h-[420px] lg:w-[460px] lg:h-[460px] aspect-square rounded-full p-2.5 sm:p-3 liquid-glass flex items-center justify-center shadow-[0_30px_90px_rgba(0,0,0,0.9)] select-none">
+            
+            <!-- Metallic Bezel Inner Border -->
+            <div class="absolute inset-0 rounded-full border border-white/20 pointer-events-none ring-1 ring-white/10"></div>
+            
+            <!-- Etched Geographical Coordinates on Bezel -->
+            <div class="absolute top-2 sm:top-2.5 left-1/2 -translate-x-1/2 text-[8px] sm:text-[9px] font-mono font-bold text-zinc-400 tracking-widest pointer-events-none z-20 bg-black/60 px-2 py-0.5 rounded-full backdrop-blur-sm">
+              N &bull; 14°37'58.2"N
+            </div>
+            <div class="absolute bottom-2 sm:bottom-2.5 left-1/2 -translate-x-1/2 text-[8px] sm:text-[9px] font-mono font-bold text-zinc-400 tracking-widest pointer-events-none z-20 bg-black/60 px-2 py-0.5 rounded-full backdrop-blur-sm">
+              S &bull; 90°34'12.4"W
+            </div>
+            <div class="absolute left-2 top-1/2 -translate-y-1/2 text-[8px] font-mono font-bold text-zinc-500 tracking-widest pointer-events-none -rotate-90 z-20 hidden sm:block">
+              DUARTE
+            </div>
+            <div class="absolute right-2 top-1/2 -translate-y-1/2 text-[8px] font-mono font-bold text-zinc-500 tracking-widest pointer-events-none rotate-90 z-20 hidden sm:block">
+              MIXCO Z2
+            </div>
+
+            <!-- Viewport Circular Aperture -->
+            <div class="w-full h-full rounded-full overflow-hidden relative shadow-inner bg-[#0A0D12]">
+              
+              <!-- GOOGLE MAPS REAL EMBED (Con Calzada Roosevelt 7-24) -->
+              <iframe id="google-maps-iframe" 
+                src="https://maps.google.com/maps?q=Calzada+Roosevelt+7-24+Zona+2+Mixco+Guatemala&t=m&z=16&ie=UTF8&iwloc=&output=embed" 
+                class="w-[125%] h-[125%] -ml-[12.5%] -mt-[12.5%] border-0 transition-all duration-700 map-dark-filter pointer-events-auto" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+
+              <!-- Floating Luxury Pin on Center Location -->
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none flex flex-col items-center z-10">
+                <div class="bg-black/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 shadow-2xl flex items-center gap-2 transform -translate-y-3">
+                  <span class="w-2 h-2 rounded-full bg-[#DC2626] animate-ping"></span>
+                  <span class="text-[10px] font-black text-white tracking-wider">AUTOVENTAS DUARTE</span>
+                </div>
+                <div class="w-2.5 h-2.5 bg-[#DC2626] rotate-45 -mt-1 border border-white/50 shadow-md"></div>
+              </div>
+
+              <!-- Top Floating Controls: Toggle Dark Mode / Standard Maps -->
+              <button onclick="toggleMapTheme()" type="button" class="absolute top-4 right-4 z-20 bg-black/85 hover:bg-black/95 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] font-bold text-white border border-white/20 shadow-xl flex items-center gap-1.5 transition-all">
+                <svg class="w-3 h-3 text-[#DC2626]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <span id="map-theme-label">Ver Satélite / Normal</span>
+              </button>
+
+              <!-- Bottom Floating Badge -->
+              <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 bg-black/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-center shadow-2xl pointer-events-none whitespace-nowrap">
+                <span class="text-[10px] font-black text-white tracking-wider block">CALZADA ROOSEVELT 7-24</span>
+                <span class="text-[8px] font-mono text-[#DC2626] uppercase tracking-widest block font-bold">ZONA 2, MIXCO &bull; PARQUEO PRIVADO</span>
+              </div>
+
+            </div>
+          </div>
+
+          <p class="text-[11px] text-zinc-500 font-mono mt-4 text-center">
+            Ubicación oficial en Google Maps &bull; Visor circular de precisión
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER MINIMALISTA -->
+  <!-- ========================================================================= -->
+  <footer class="border-t border-white/[0.08] py-10 bg-[#050608]">
+    <div class="max-w-[1500px] mx-auto px-4 sm:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-black italic text-white">DUARTE</span>
+        <span class="font-extrabold tracking-widest text-[#DC2626] uppercase">AUTOVENTAS</span>
+        <span class="text-zinc-700">|</span>
+        <span>Calzada Roosevelt 7-24 Zona 2, Mixco, Guatemala</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span>PBX / WhatsApp: <strong class="text-white">5717-5666</strong></span>
+        <a href="admin.html" class="hover:text-white transition-colors flex items-center gap-1.5 border border-white/10 hover:border-white/20 px-3.5 py-1.5 rounded-full text-[11px] bg-white/[0.03] shadow-sm">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Panel Administrativo</span>
+          <svg class="w-3 h-3 text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================= -->
+  <!-- MODAL DE DETALLE DEL VEHÍCULO: CON MÚLTIPLES FOTOS (USA IMPORTS) -->
+  <!-- ========================================================================= -->
+  <div id="vehicle-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/85 backdrop-blur-md transition-opacity">
+    <div class="bg-[#0B0D11] rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-y-auto border border-white/10 text-white relative shadow-2xl">
+      
+      <!-- Close Button -->
+      <button onclick="closeVehicleModal()" class="absolute top-5 right-5 z-20 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+
+      <div class="p-6 sm:p-8">
+        
+        <!-- Header -->
+        <div class="pr-10">
+          <div class="flex flex-wrap items-center gap-2 mb-2" id="modal-pills">
+            <!-- Pills injected by JS -->
+          </div>
+          <h3 id="modal-title" class="text-2xl sm:text-3xl font-black text-white tracking-tight">Toyota RAV4 XLE 2014 4X4</h3>
+          <p id="modal-mileage" class="text-xs sm:text-sm font-semibold text-zinc-400 mt-1">78,000 millas reales verificadas con Carfax</p>
+        </div>
+
+        <!-- MÚLTIPLES FOTOS: Galería Interactiva de Inspección -->
+        <div class="my-5">
+          <!-- Visor Principal Grande -->
+          <div class="rounded-2xl overflow-hidden bg-black border border-white/10 h-64 sm:h-96 relative">
+            <img id="modal-main-image" src="" alt="Foto del vehículo importado" class="w-full h-full object-cover">
+            <div class="absolute bottom-3 left-3 bg-black/80 text-white text-[11px] font-bold px-3 py-1 rounded-lg backdrop-blur-sm border border-white/10">
+              <span id="modal-image-caption">1. Vista Frontal 3/4</span>
+            </div>
+          </div>
+
+          <!-- Tiras de Miniaturas Clicables -->
+          <div id="modal-thumbnails-strip" class="grid grid-cols-4 sm:grid-cols-5 gap-2 mt-3">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <!-- Price & Action Bar -->
+        <div class="bg-[#12151C] p-5 rounded-2xl border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <span class="text-[11px] text-zinc-400 block">Precio de Contado</span>
+            <span id="modal-price" class="text-2xl font-black text-white">Q 78,500</span>
+          </div>
+          <div>
+            <span class="text-[11px] text-zinc-400 block">Cuota con Visacuotas</span>
+            <span id="modal-installment" class="text-lg font-bold text-[#DC2626]">Desde Q 1,650 / mes</span>
+          </div>
+          <div class="flex items-center gap-2 w-full sm:w-auto">
+            <button id="modal-btn-calc" class="w-full sm:w-auto bg-white hover:bg-zinc-200 text-black px-5 py-2.5 rounded-full font-extrabold text-xs transition-colors">
+              Calcular Cuota
+            </button>
+            <a id="modal-wa-link" href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-[#DC2626] hover:bg-[#B91C1C] text-white px-5 py-2.5 rounded-full font-bold text-xs flex items-center justify-center gap-1.5 transition-colors">
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Diagnóstico de 120 Puntos -->
+        <div class="mt-6">
+          <h4 class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-3">
+            Diagnóstico de Importación y Revisión de 120 Puntos
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+            <div class="bg-[#12151C] p-3 rounded-xl border border-white/5 flex items-center gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span>
+              <span class="text-zinc-300"><strong>Bolsas de Aire:</strong> Originales de fábrica e intactas</span>
+            </div>
+            <div class="bg-[#12151C] p-3 rounded-xl border border-white/5 flex items-center gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span>
+              <span class="text-zinc-300"><strong>Historial Carfax:</strong> Título limpio en subasta EE.UU.</span>
+            </div>
+            <div class="bg-[#12151C] p-3 rounded-xl border border-white/5 flex items-center gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span>
+              <span class="text-zinc-300"><strong>Compresión de Motor:</strong> 165 PSI parejo sin fugas</span>
+            </div>
+            <div class="bg-[#12151C] p-3 rounded-xl border border-white/5 flex items-center gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span>
+              <span class="text-zinc-300"><strong>Transmisión:</strong> Cambios suaves sin códigos OBD2</span>
+            </div>
+            <div class="bg-[#12151C] p-3 rounded-xl border border-white/5 flex items-center gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span>
+              <span class="text-zinc-300"><strong>Chasis:</strong> Sin daños estructurales ni corrosión</span>
+            </div>
+            <div class="bg-[#12151C] p-3 rounded-xl border border-white/5 flex items-center gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span>
+              <span class="text-zinc-300"><strong>SAT:</strong> Póliza aduanal cancelada y placas al día</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="mt-5">
+          <h4 class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-1">Descripción del Vehículo</h4>
+          <p id="modal-desc" class="text-xs text-zinc-400 leading-relaxed"></p>
+        </div>
+
+        <!-- Specs Grid -->
+        <div class="mt-5">
+          <h4 class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Ficha Técnica</h4>
+          <div id="modal-specs-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT NATIVO: DATASET, GALERÍA, PRELOADER Y CONTROLES -->
+  <!-- ========================================================================= -->
+  <script>
+    const DEFAULT_CATALOG = [
+      {
+        id: 'rav4-2014',
+        name: 'Toyota RAV4 XLE 2014 4X4',
+        brand: 'Toyota',
+        type: 'SUV',
+        year: 2014,
+        transmission: 'Automática',
+        drive: '4x4',
+        price: 78500,
+        monthly: 1650,
+        mileage: '78,000 mi',
+        mileageNum: 78000,
+        status: 'Recién Ingresado',
+        payment: 'Financiamiento',
+        primaryPill: '4X4',
+        pills: ['Recién Ingresada', 'Bolsas Buenas', 'Motor 2.5L'],
+        image: 'https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=1200&q=80',
+        gallery: [
+          { url: 'https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=1200&q=80', label: '1. Exterior Frontal 3/4' },
+          { url: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80', label: '2. Exterior Lateral / Rines' },
+          { url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80', label: '3. Interior & Pantalla Touch' },
+          { url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80', label: '4. Motor 2.5L Sin Fugas' },
+          { url: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=1200&q=80', label: '5. Verificación Carfax Limpio' }
+        ],
+        description: 'Toyota RAV4 XLE año 2014 con tracción 4x4 integral. Recién ingresada de subasta en EE.UU., bolsas de aire frontales y laterales intactas, sunroof eléctrico, cámara de retroceso, pantalla táctil, climatizador bizona, aros de aleación originales y llantas en 90% de vida útil.',
+        specs: {
+          'Motor': '2.5L 4 Cilindros DOHC',
+          'Transmisión': 'Automática 6 Vel.',
+          'Tracción': 'AWD con Bloqueo',
+          'Bolsas': 'Originales Intactas',
+          'Combustible': 'Gasolina',
+          'Asientos': '5 Pasajeros',
+          'Carfax': 'Limpio Verificado',
+          'Placas': 'Listas para Traspaso'
+        }
+      },
+      {
+        id: 'cx5-2017',
+        name: 'Mazda CX-5 Grand Touring 2017 AWD',
+        brand: 'Mazda',
+        type: 'SUV',
+        year: 2017,
+        transmission: 'Automática',
+        drive: '4x4',
+        price: 92000,
+        monthly: 1950,
+        mileage: '64,000 mi',
+        mileageNum: 64000,
+        status: 'Recién Ingresado',
+        payment: 'Financiamiento',
+        primaryPill: 'AWD',
+        pills: ['Recién Ingresada', 'Cuero & Sunroof', 'Motor 2.5L'],
+        image: 'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1200&q=80',
+        gallery: [
+          { url: 'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1200&q=80', label: '1. Exterior Frontal' },
+          { url: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80', label: '2. Vista Lateral' },
+          { url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80', label: '3. Tapicería en Cuero Negro' },
+          { url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80', label: '4. Motor SkyActiv-G 2.5L' }
+        ],
+        description: 'Mazda CX-5 Grand Touring con tracción integral AWD. Interior en fino cuero negro, asientos eléctricos con memoria y calefacción, sistema de audio Bose, sunroof, pantalla central con joystick de control, faros LED adaptativos y rines bitono de 19 pulgadas.',
+        specs: {
+          'Motor': '2.5L SkyActiv-G',
+          'Transmisión': 'Automática 6 Vel.',
+          'Tracción': 'i-ACTIV AWD',
+          'Bolsas': 'Intactas de Fábrica',
+          'Combustible': 'Gasolina',
+          'Asientos': '5 Pasajeros (Cuero)',
+          'Carfax': 'Sin Daños Estructurales',
+          'Placas': 'Al Día en SAT'
+        }
+      },
+      {
+        id: 'crv-2016',
+        name: 'Honda CR-V EX-L 2016 AWD',
+        brand: 'Honda',
+        type: 'SUV',
+        year: 2016,
+        transmission: 'Automática',
+        drive: '4x4',
+        price: 88500,
+        monthly: 1850,
+        mileage: '72,000 mi',
+        mileageNum: 72000,
+        status: 'Recién Ingresado',
+        payment: 'Financiamiento',
+        primaryPill: 'AWD',
+        pills: ['Recién Ingresada', 'Sunroof & Cuero', 'Motor 2.4L'],
+        image: 'https://images.unsplash.com/photo-1568844293986-8d0400bd4745?auto=format&fit=crop&w=1200&q=80',
+        gallery: [
+          { url: 'https://images.unsplash.com/photo-1568844293986-8d0400bd4745?auto=format&fit=crop&w=1200&q=80', label: '1. Exterior Frontal' },
+          { url: 'https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=1200&q=80', label: '2. Vista Trasera & Compuerta' },
+          { url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80', label: '3. Cabina en Cuero Legítimo' },
+          { url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80', label: '4. Motor i-VTEC Earth Dreams' }
+        ],
+        description: 'Honda CR-V versión EX-L tope de línea. Tracción Real Time AWD, tapicería en cuero legítimo, botón de encendido Start/Stop, cámara de punto ciego Honda LaneWatch, sunroof eléctrico y compuerta trasera eléctrica.',
+        specs: {
+          'Motor': '2.4L i-VTEC Earth Dreams',
+          'Transmisión': 'CVT Automática',
+          'Tracción': 'Real Time AWD',
+          'Bolsas': 'Completas y Buenas',
+          'Combustible': 'Gasolina',
+          'Asientos': '5 Pasajeros',
+          'Carfax': 'Historial Transparente',
+          'Placas': 'Traspaso Incluido'
+        }
+      },
+      {
+        id: 'sportage-2018',
+        name: 'Kia Sportage LX 2018',
+        brand: 'Kia',
+        type: 'SUV',
+        year: 2018,
+        transmission: 'Automática',
+        drive: '4x2',
+        price: 84000,
+        monthly: 1750,
+        mileage: '58,000 mi',
+        mileageNum: 58000,
+        status: 'Recién Ingresado',
+        payment: 'Financiamiento',
+        primaryPill: 'Recién Ingresada',
+        pills: ['Cámara & Pantalla', 'Motor 2.4L', '4x2'],
+        image: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&q=80',
+        gallery: [
+          { url: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&q=80', label: '1. Exterior Frontal' },
+          { url: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80', label: '2. Vista Lateral' },
+          { url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80', label: '3. Tablero y Conectividad' },
+          { url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80', label: '4. Motor GDI 2.4L' }
+        ],
+        description: 'Kia Sportage LX año 2018 con excelente rendimiento de combustible. Pantalla táctil con conectividad para smartphones, cámara de retroceso con guías dinámicas, selector de modos de manejo y control de descenso.',
+        specs: {
+          'Motor': '2.4L GDI 4 Cilindros',
+          'Transmisión': 'Automática 6 Vel.',
+          'Tracción': 'Delantera 4x2',
+          'Bolsas': 'Originales Intactas',
+          'Combustible': 'Gasolina',
+          'Asientos': '5 Pasajeros',
+          'Carfax': 'Verificado',
+          'Placas': 'SAT al Día'
+        }
+      },
+      {
+        id: 'hilux-2019',
+        name: 'Toyota Hilux SRV 2019 4X4',
+        brand: 'Toyota',
+        type: 'Pickup',
+        year: 2019,
+        transmission: 'Mecánica',
+        drive: '4x4',
+        price: 168000,
+        monthly: 3450,
+        mileage: '89,000 mi',
+        mileageNum: 89000,
+        status: 'De Agencia',
+        payment: 'Contado',
+        primaryPill: 'De Agencia',
+        pills: ['4X4 Mecánica', 'Turbo Diésel 2.8L', 'Bolsas Intactas'],
+        image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80',
+        gallery: [
+          { url: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80', label: '1. Exterior Frontal Hilux' },
+          { url: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80', label: '2. Palangana y Duraliner' },
+          { url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80', label: '3. Cabina SRV Doble' },
+          { url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80', label: '4. Motor 2.8L D-4D 1GD' }
+        ],
+        description: 'Toyota Hilux versión SRV doble cabina 4x4. Comprada de agencia en Guatemala con récord de servicios completo en taller autorizado. Motor Turbo Diésel 2.8L con modo Eco y Power, estribos de aluminio y roll bar cromado.',
+        specs: {
+          'Motor': '2.8L 1GD-FTV Turbo Diésel',
+          'Transmisión': 'Mecánica 6 Vel.',
+          'Tracción': '4x4 con Reductora',
+          'Bolsas': 'De Agencia Intactas',
+          'Combustible': 'Diésel',
+          'Asientos': '5 Pasajeros',
+          'Carfax': 'Vehículo Nacional',
+          'Placas': 'Comercial / Particular'
+        }
+      },
+      {
+        id: 'civic-2017',
+        name: 'Honda Civic EX 2017 Turbo',
+        brand: 'Honda',
+        type: 'Sedán',
+        year: 2017,
+        transmission: 'Automática',
+        drive: '4x2',
+        price: 69000,
+        monthly: 1450,
+        mileage: '68,000 mi',
+        mileageNum: 68000,
+        status: 'Recién Ingresado',
+        payment: 'Financiamiento',
+        primaryPill: 'Recién Ingresado',
+        pills: ['Motor 1.5L Turbo', 'Sunroof & Clima', 'Sedán'],
+        image: 'https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=1200&q=80',
+        gallery: [
+          { url: 'https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=1200&q=80', label: '1. Exterior Frontal Sedán' },
+          { url: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80', label: '2. Vista Lateral & Sunroof' },
+          { url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80', label: '3. Cabina Digital y Apple CarPlay' },
+          { url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80', label: '4. Motor 1.5L VTEC Turbo' }
+        ],
+        description: 'Honda Civic EX equipado con motor 1.5 Turbo que brinda gran aceleración con bajísimo consumo de combustible. Sunroof eléctrico, freno de mano electrónico con Auto-Hold y pantalla con Apple CarPlay y Android Auto.',
+        specs: {
+          'Motor': '1.5L Turbo VTEC',
+          'Transmisión': 'Automática CVT',
+          'Tracción': 'Delantera 4x2',
+          'Bolsas': 'Originales Buenas',
+          'Combustible': 'Gasolina',
+          'Asientos': '5 Pasajeros',
+          'Carfax': 'Verificado',
+          'Placas': 'Traspaso Rápido'
+        }
+      },
+      {
+        id: 'tucson-2018',
+        name: 'Hyundai Tucson Limited 2018',
+        brand: 'Hyundai',
+        type: 'SUV',
+        year: 2018,
+        transmission: 'Automática',
+        drive: '4x2',
+        price: 82000,
+        monthly: 1720,
+        mileage: '61,000 mi',
+        mileageNum: 61000,
+        status: 'Recién Ingresado',
+        payment: 'Financiamiento',
+        primaryPill: 'Recién Ingresada',
+        pills: ['Modo Sport', 'Pantalla Touch', 'Bolsas Buenas'],
+        image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80',
+        gallery: [
+          { url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80', label: '1. Exterior Frontal Tucson' },
+          { url: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80', label: '2. Vista Lateral' },
+          { url: 'https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=1200&q=80', label: '3. Interior Ergonómico' },
+          { url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80', label: '4. Motor 2.0L Nu 4 Cil' }
+        ],
+        description: 'Hyundai Tucson edición Limited en impecable estado de conservación. Luces de marcha diurna LED, asientos ergonómicos, cámara de reversa con sensores de proximidad y excelente altura al suelo.',
+        specs: {
+          'Motor': '2.0L Nu 4 Cilindros',
+          'Transmisión': 'Automática 6 Vel.',
+          'Tracción': 'Delantera 4x2',
+          'Bolsas': 'Originales Intactas',
+          'Combustible': 'Gasolina',
+          'Asientos': '5 Pasajeros',
+          'Carfax': 'Inspección Aprobada',
+          'Placas': 'Al Día'
+        }
+      },
+      {
+        id: 'corolla-2016',
+        name: 'Toyota Corolla S 2016',
+        brand: 'Toyota',
+        type: 'Sedán',
+        year: 2016,
+        transmission: 'Automática',
+        drive: '4x2',
+        price: 64500,
+        monthly: 1350,
+        mileage: '74,000 mi',
+        mileageNum: 74000,
+        status: 'Recién Ingresado',
+        payment: 'Financiamiento',
+        primaryPill: 'Recién Ingresado',
+        pills: ['Económico 1.8L', 'Cámara de Retroceso', 'Full Equipo'],
+        image: 'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=1200&q=80',
+        gallery: [
+          { url: 'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=1200&q=80', label: '1. Exterior Frontal Corolla S' },
+          { url: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80', label: '2. Vista Lateral Deportiva' },
+          { url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80', label: '3. Timón con Paletas F1' },
+          { url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80', label: '4. Motor 1.8L Dual VVT-i' }
+        ],
+        description: 'Toyota Corolla versión S deportiva. Spoilers de fábrica, aros especiales diamantados, timón con paletas de cambio tipo F1, modo Sport, tapicería mixta con costuras azules y confiabilidad mecánica Toyota.',
+        specs: {
+          'Motor': '1.8L Dual VVT-i',
+          'Transmisión': 'CVT con Paletas F1',
+          'Tracción': 'Delantera 4x2',
+          'Bolsas': 'Originales Buenas',
+          'Combustible': 'Gasolina',
+          'Asientos': '5 Pasajeros',
+          'Carfax': 'Limpio Certificado',
+          'Placas': 'Listas en SAT'
+        }
+      }
+    ];
+
+    // SYNC CATALOG WITH LOCALSTORAGE (ADMIN CENTER)
+    let VEHICLES = [];
+    try {
+      const stored = localStorage.getItem('autoventas_duarte_vehicles');
+      if (stored) {
+        VEHICLES = JSON.parse(stored);
+      }
+    } catch(e) {}
+
+    if (!VEHICLES || VEHICLES.length === 0) {
+      VEHICLES = [...DEFAULT_CATALOG];
+      localStorage.setItem('autoventas_duarte_vehicles', JSON.stringify(VEHICLES));
+    }
+
+    let currentFiltered = [...VEHICLES];
+    let selectedCarId = 'rav4-2014';
+    let selectedTerm = 48;
+    let downPaymentPercent = 20;
+    let selectedDateFormatted = 'Martes 27 de Octubre, 2026';
+    let selectedTime = '11:00 AM';
+
+    // HERO MODEL SWITCHER
+    function switchHeroCar(index) {
+      const car = VEHICLES[index];
+      if (!car) return;
+
+      document.getElementById('hero-car-image').src = car.image;
+      document.getElementById('hero-badge-name').textContent = car.name;
+      document.getElementById('hero-badge-specs').textContent = `${car.mileage} \u2022 ${car.primaryPill} \u2022 ${car.transmission}`;
+      document.getElementById('hero-badge-price').textContent = `Q ${car.price.toLocaleString('es-GT')}`;
+
+      const buttons = document.querySelectorAll('.hero-tab-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('active', 'bg-white/10', 'border-white/25', 'text-white');
+        btn.classList.add('bg-white/[0.03]', 'border-white/5', 'text-zinc-400');
+      });
+
+      const currentBtn = event ? event.currentTarget : buttons[0];
+      if (currentBtn) {
+        currentBtn.classList.add('active', 'bg-white/10', 'border-white/25', 'text-white');
+        currentBtn.classList.remove('bg-white/[0.03]', 'border-white/5', 'text-zinc-400');
+      }
+    }
+
+    // RENDERIZADO DEL CATÁLOGO
+    function renderCatalog(cars) {
+      const grid = document.getElementById('catalog-grid');
+      const emptyState = document.getElementById('catalog-empty-state');
+      const counter = document.getElementById('catalog-counter');
+
+      counter.textContent = `${cars.length} vehículo${cars.length === 1 ? '' : 's'}`;
+
+      if (cars.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      grid.innerHTML = cars.map(car => `
+        <article class="bg-[#0B0D11] rounded-3xl p-6 border border-white/[0.08] hover:border-white/20 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="font-extrabold text-base sm:text-lg text-white group-hover:text-[#DC2626] transition-colors leading-tight cursor-pointer" onclick="openVehicleModal('${car.id}')">
+                ${car.name}
+              </h3>
+              <span class="text-xs font-semibold text-zinc-400 shrink-0 mt-0.5 font-mono">
+                ${car.mileage}
+              </span>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-1.5 mt-2.5">
+              <span class="bg-[#DC2626] text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full">
+                ${car.primaryPill}
+              </span>
+              ${car.pills.map(p => `
+                <span class="bg-white/5 text-zinc-300 text-[10px] font-medium px-2.5 py-0.5 rounded-full border border-white/10">
+                  ${p}
+                </span>
+              `).join('')}
+            </div>
+
+            <div class="relative overflow-hidden rounded-2xl my-4 bg-black/40 border border-white/5 cursor-pointer" onclick="openVehicleModal('${car.id}')">
+              <img 
+                src="${car.image}" 
+                alt="${car.name}" 
+                class="object-cover h-48 sm:h-52 w-full rounded-2xl group-hover:scale-105 transition-transform duration-500 ${car.isSold ? 'opacity-60 grayscale' : ''}"
+                loading="lazy"
+              />
+              ${car.isSold ? `
+                <div class="absolute inset-0 bg-black/75 backdrop-blur-[2px] flex items-center justify-center">
+                  <span class="px-3.5 py-1.5 rounded-full bg-[#DC2626] text-white text-[10px] font-black tracking-widest uppercase shadow-2xl border border-white/20">
+                    VENDIDO &bull; TRASPASO SAT
+                  </span>
+                </div>
+              ` : `
+                <div class="absolute bottom-3 right-3 bg-black/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg backdrop-blur-sm border border-white/10 flex items-center gap-1">
+                  <span>${car.gallery ? car.gallery.length : 5} Fotografías</span>
+                </div>
+              `}
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/[0.06] flex items-end justify-between gap-4">
+            <div>
+              <span class="block text-[10px] text-zinc-400 font-medium">
+                Desde Q${car.monthly.toLocaleString('es-GT')} / mes con Visacuotas
+              </span>
+              <span class="block text-2xl font-black text-white tracking-tight mt-0.5">
+                Q${car.price.toLocaleString('es-GT')}
+              </span>
+            </div>
+
+            <button 
+              onclick="loadCarIntoCalculator('${car.id}')" 
+              title="Calcular cuota para ${car.name}" 
+              class="bg-white hover:bg-zinc-200 text-black w-10 h-10 rounded-xl flex items-center justify-center transition-colors shrink-0"
+            >
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+            </button>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // FILTRADO
+    function applyFilters() {
+      const brandVal = document.getElementById('filter-brand').value;
+      const typeVal = document.getElementById('filter-type').value;
+      const yearVal = document.getElementById('filter-year').value;
+      const transVal = document.getElementById('filter-transmission').value;
+      const driveVal = document.getElementById('filter-drive').value;
+      const priceVal = document.getElementById('filter-price').value;
+      const statusVal = document.getElementById('filter-status').value;
+      const paymentVal = document.getElementById('filter-payment').value;
+
+      currentFiltered = VEHICLES.filter(car => {
+        if (brandVal !== 'all' && car.brand !== brandVal) return false;
+        if (typeVal !== 'all' && car.type !== typeVal) return false;
+        if (yearVal !== 'all') {
+          const [minY, maxY] = yearVal.split('-').map(Number);
+          if (car.year < minY || car.year > maxY) return false;
+        }
+        if (transVal !== 'all' && car.transmission !== transVal) return false;
+        if (driveVal !== 'all' && car.drive !== driveVal) return false;
+        if (priceVal !== 'all') {
+          const maxP = Number(priceVal);
+          if (car.price > maxP) return false;
+        }
+        if (statusVal !== 'all' && car.status !== statusVal) return false;
+        if (paymentVal !== 'all' && car.payment !== paymentVal) return false;
+        return true;
+      });
+
+      renderCatalog(currentFiltered);
+      updateFilterSummary();
+    }
+
+    function updateFilterSummary() {
+      const summaryElem = document.getElementById('filter-summary-text');
+      const brandVal = document.getElementById('filter-brand').value;
+      const typeVal = document.getElementById('filter-type').value;
+      const driveVal = document.getElementById('filter-drive').value;
+
+      let labelParts = [];
+      if (brandVal !== 'all') labelParts.push(brandVal);
+      if (typeVal !== 'all') labelParts.push(typeVal);
+      if (driveVal !== 'all') labelParts.push(driveVal);
+
+      if (labelParts.length === 0) {
+        summaryElem.innerHTML = `Mostrando: <strong class="text-white font-bold">Todos los vehículos disponibles [${currentFiltered.length}]</strong>`;
+      } else {
+        summaryElem.innerHTML = `Mostrando: <strong class="text-white font-bold">${labelParts.join(' \\ ')} [${currentFiltered.length}]</strong>`;
+      }
+    }
+
+    function resetAllFilters() {
+      document.getElementById('filter-brand').value = 'all';
+      document.getElementById('filter-type').value = 'all';
+      document.getElementById('filter-year').value = 'all';
+      document.getElementById('filter-transmission').value = 'all';
+      document.getElementById('filter-drive').value = 'all';
+      document.getElementById('filter-price').value = 'all';
+      document.getElementById('filter-status').value = 'all';
+      document.getElementById('filter-payment').value = 'all';
+
+      document.querySelectorAll('.quick-pill').forEach(btn => {
+        btn.classList.remove('bg-white', 'text-black');
+        btn.classList.add('bg-[#12151C]', 'text-zinc-300');
+      });
+      const allPill = document.querySelector('[data-quick-filter="all"]');
+      if (allPill) {
+        allPill.classList.add('bg-white', 'text-black');
+        allPill.classList.remove('bg-[#12151C]', 'text-zinc-300');
+      }
+
+      applyFilters();
+    }
+
+    // CALCULADORA
+    function initCalculator() {
+      const select = document.getElementById('calc-vehicle-select');
+      select.innerHTML = VEHICLES.map(car => `
+        <option value="${car.id}" ${car.id === selectedCarId ? 'selected' : ''}>
+          ${car.name} - Q${car.price.toLocaleString('es-GT')}
+        </option>
+      `).join('');
+
+      select.addEventListener('change', (e) => {
+        selectedCarId = e.target.value;
+        updateCalculator();
+      });
+
+      const slider = document.getElementById('calc-downpayment-slider');
+      slider.addEventListener('input', (e) => {
+        downPaymentPercent = Number(e.target.value);
+        updateCalculator();
+      });
+
+      document.querySelectorAll('.calc-term-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.calc-term-btn').forEach(b => {
+            b.classList.remove('bg-[#DC2626]', 'border-[#DC2626]', 'text-white');
+            b.classList.add('bg-[#080A0E]', 'border-white/10', 'text-zinc-400');
+          });
+          btn.classList.add('bg-[#DC2626]', 'border-[#DC2626]', 'text-white');
+          btn.classList.remove('bg-[#080A0E]', 'border-white/10', 'text-zinc-400');
+          selectedTerm = Number(btn.getAttribute('data-term'));
+          updateCalculator();
+        });
+      });
+
+      updateCalculator();
+    }
+
+    function updateCalculator() {
+      const car = VEHICLES.find(c => c.id === selectedCarId) || VEHICLES[0];
+      
+      document.getElementById('calc-car-thumb').src = car.image;
+      document.getElementById('calc-car-title').textContent = car.name;
+      document.getElementById('calc-car-cash-price').textContent = `Q ${car.price.toLocaleString('es-GT')}`;
+
+      const downPaymentQ = Math.round(car.price * (downPaymentPercent / 100));
+      const financedQ = car.price - downPaymentQ;
+
+      document.getElementById('calc-downpayment-display').textContent = `Q ${downPaymentQ.toLocaleString('es-GT')}`;
+      document.getElementById('calc-downpayment-percent').textContent = `(${downPaymentPercent}%)`;
+      document.getElementById('calc-financed-amount').textContent = `Q ${financedQ.toLocaleString('es-GT')}`;
+      document.getElementById('calc-term-summary').textContent = `${selectedTerm} meses`;
+
+      let factor = 1.28;
+      if (selectedTerm === 12) factor = 1.075;
+      else if (selectedTerm === 24) factor = 1.14;
+      else if (selectedTerm === 36) factor = 1.21;
+      else if (selectedTerm === 48) factor = 1.28;
+
+      const monthly = Math.round((financedQ * factor) / selectedTerm);
+      document.getElementById('calc-monthly-installment').textContent = `Q ${monthly.toLocaleString('es-GT')}`;
+    }
+
+    function loadCarIntoCalculator(carId) {
+      selectedCarId = carId;
+      const select = document.getElementById('calc-vehicle-select');
+      if (select) select.value = carId;
+      updateCalculator();
+
+      const target = document.getElementById('financiamiento');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // FECHAS (OCTUBRE 2026) Y HORARIOS
+    function initDatePicker() {
+      const container = document.getElementById('date-picker-container');
+      const startDate = new Date(2026, 9, 27);
+      
+      const dayNames = ['DOM', 'LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SÁB'];
+      const monthNames = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+      const fullDayNames = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+      const fullMonthNames = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+
+      let buttonsHTML = '';
+
+      for (let i = 0; i < 14; i++) {
+        const d = new Date(startDate);
+        d.setDate(startDate.getDate() + i);
+
+        const dayOfWeekShort = dayNames[d.getDay()];
+        const dayNumber = d.getDate();
+        const monthShort = monthNames[d.getMonth()];
+        const formattedFull = `${fullDayNames[d.getDay()]} ${dayNumber} de ${fullMonthNames[d.getMonth()]}, ${d.getFullYear()}`;
+        const isDefault = i === 0;
+
+        buttonsHTML += `
+          <button 
+            type="button" 
+            data-date-formatted="${formattedFull}"
+            class="date-pill-btn shrink-0 w-14 py-2.5 px-1 rounded-xl border text-center transition-all ${
+              isDefault 
+                ? 'bg-white border-white text-black font-extrabold' 
+                : 'bg-[#080A0E] border-white/10 text-zinc-400 hover:text-white hover:border-white/20'
+            }"
+          >
+            <span class="block text-[9px] font-bold uppercase opacity-70">${dayOfWeekShort}</span>
+            <span class="block text-base font-black leading-tight my-0.5">${dayNumber}</span>
+            <span class="block text-[9px] font-semibold opacity-60 uppercase">${monthShort}</span>
+          </button>
+        `;
+      }
+
+      container.innerHTML = buttonsHTML;
+
+      document.querySelectorAll('.date-pill-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.date-pill-btn').forEach(b => {
+            b.classList.remove('bg-white', 'border-white', 'text-black', 'font-extrabold');
+            b.classList.add('bg-[#080A0E]', 'border-white/10', 'text-zinc-400');
+          });
+          btn.classList.add('bg-white', 'border-white', 'text-black', 'font-extrabold');
+          btn.classList.remove('bg-[#080A0E]', 'border-white/10', 'text-zinc-400');
+
+          selectedDateFormatted = btn.getAttribute('data-date-formatted');
+          document.getElementById('selected-date-label').textContent = selectedDateFormatted;
+        });
+      });
+
+      document.querySelectorAll('.time-slot-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.time-slot-btn').forEach(b => {
+            b.classList.remove('bg-white', 'border-white', 'text-black');
+            b.classList.add('bg-[#080A0E]', 'border-white/10', 'text-zinc-400');
+          });
+          btn.classList.add('bg-white', 'border-white', 'text-black');
+          btn.classList.remove('bg-[#080A0E]', 'border-white/10', 'text-zinc-400');
+          selectedTime = btn.getAttribute('data-time');
+        });
+      });
+    }
+
+    // WHATSAPP
+    function setupWhatsAppSubmit() {
+      const btn = document.getElementById('btn-submit-whatsapp');
+      btn.addEventListener('click', () => {
+        const car = VEHICLES.find(c => c.id === selectedCarId) || VEHICLES[0];
+        const clientName = document.getElementById('client-name').value.trim() || 'Cliente Interesado';
+        const clientPhone = document.getElementById('client-phone').value.trim() || 'No indicado';
+
+        const downPaymentQ = Math.round(car.price * (downPaymentPercent / 100));
+        const financedQ = car.price - downPaymentQ;
+
+        let factor = 1.28;
+        if (selectedTerm === 12) factor = 1.075;
+        else if (selectedTerm === 24) factor = 1.14;
+        else if (selectedTerm === 36) factor = 1.21;
+        else if (selectedTerm === 48) factor = 1.28;
+
+        const monthlyQ = Math.round((financedQ * factor) / selectedTerm);
+
+        const message = 
+`Hola Autoventas Duarte, deseo agendar una prueba de manejo para la siguiente unidad:
+
+[VEHICULO]
+- Unidad: ${car.name}
+- Precio de Contado: Q ${car.price.toLocaleString('es-GT')}
+
+[PLAN ESTIMADO DE FINANCIAMIENTO]
+- Enganche Propuesto: Q ${downPaymentQ.toLocaleString('es-GT')} (${downPaymentPercent}%)
+- Saldo a Financiar: Q ${financedQ.toLocaleString('es-GT')}
+- Plazo: ${selectedTerm} Meses
+- Cuota Mensual Estimada: Q ${monthlyQ.toLocaleString('es-GT')} / mes
+
+[CITA EN CALZADA ROOSEVELT]
+- Fecha: ${selectedDateFormatted}
+- Horario: ${selectedTime}
+- Lugar: Calzada Roosevelt 7-24 Zona 2, Mixco, Guatemala
+
+[CLIENTE]
+- Nombre: ${clientName}
+- Telefono: ${clientPhone}
+
+Agradezco confirmar disponibilidad de la unidad. Muchas gracias.`;
+
+        // Save appointment to LocalStorage for Admin Portal
+        try {
+          const leads = JSON.parse(localStorage.getItem('autoventas_duarte_leads') || '[]');
+          leads.unshift({
+            id: 'lead-' + Date.now(),
+            name: clientName,
+            phone: clientPhone,
+            carName: car.name,
+            downpayment: `Q ${downpayment.toLocaleString('es-GT')} (${downPaymentPercent}%)`,
+            monthly: `Q ${monthly.toLocaleString('es-GT')} / mes`,
+            term: `${selectedTerm} meses`,
+            appointmentDate: selectedDateFormatted,
+            appointmentTime: selectedTime,
+            dateSubmitted: new Date().toLocaleDateString('es-GT', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
+            status: 'Nuevo'
+          });
+          localStorage.setItem('autoventas_duarte_leads', JSON.stringify(leads));
+        } catch(e) {}
+
+        const waUrl = `https://wa.me/50257175666?text=${encodeURIComponent(message)}`;
+        window.open(waUrl, '_blank');
+      });
+    }
+
+    // MODAL MULTI-FOTO
+    function openVehicleModal(carId) {
+      const car = VEHICLES.find(c => c.id === carId);
+      if (!car) return;
+
+      document.getElementById('modal-title').textContent = car.name;
+      document.getElementById('modal-mileage').textContent = `${car.mileage} reales verificadas con Carfax`;
+      document.getElementById('modal-price').textContent = `Q ${car.price.toLocaleString('es-GT')}`;
+      document.getElementById('modal-installment').textContent = `Desde Q ${car.monthly.toLocaleString('es-GT')} / mes`;
+      document.getElementById('modal-desc').textContent = car.description;
+
+      const mainImg = document.getElementById('modal-main-image');
+      const caption = document.getElementById('modal-image-caption');
+      mainImg.src = car.gallery[0].url;
+      caption.textContent = car.gallery[0].label;
+
+      const strip = document.getElementById('modal-thumbnails-strip');
+      strip.innerHTML = car.gallery.map((g, idx) => `
+        <div 
+          onclick="selectModalPhoto('${g.url}', '${g.label}', this)" 
+          class="modal-thumb-item cursor-pointer rounded-xl overflow-hidden border transition-all ${idx === 0 ? 'border-[#DC2626]' : 'border-white/10 opacity-60 hover:opacity-100'}"
+        >
+          <img src="${g.url}" alt="${g.label}" class="w-full h-14 object-cover">
+        </div>
+      `).join('');
+
+      const pillsContainer = document.getElementById('modal-pills');
+      pillsContainer.innerHTML = `
+        <span class="bg-[#DC2626] text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full">
+          ${car.primaryPill}
+        </span>
+        ${car.pills.map(p => `
+          <span class="bg-white/10 text-zinc-300 text-[10px] font-medium px-2.5 py-0.5 rounded-full border border-white/10">
+            ${p}
+          </span>
+        `).join('')}
+      `;
+
+      const specsGrid = document.getElementById('modal-specs-grid');
+      specsGrid.innerHTML = Object.entries(car.specs).map(([key, value]) => `
+        <div class="bg-[#12151C] p-2.5 rounded-xl border border-white/5">
+          <span class="text-zinc-500 block text-[9px] uppercase font-bold tracking-wider">${key}</span>
+          <span class="text-white font-bold text-xs block mt-0.5">${value}</span>
+        </div>
+      `).join('');
+
+      const waMsg = `Hola Autoventas Duarte, estoy interesado en el vehículo ${car.name} (Precio: Q ${car.price.toLocaleString('es-GT')}) en Calzada Roosevelt. ¿Podrían confirmarme si aún está disponible?`;
+      document.getElementById('modal-wa-link').href = `https://wa.me/50257175666?text=${encodeURIComponent(waMsg)}`;
+
+      document.getElementById('modal-btn-calc').onclick = () => {
+        closeVehicleModal();
+        loadCarIntoCalculator(car.id);
+      };
+
+      document.getElementById('vehicle-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function selectModalPhoto(url, label, el) {
+      document.getElementById('modal-main-image').src = url;
+      document.getElementById('modal-image-caption').textContent = label;
+
+      document.querySelectorAll('.modal-thumb-item').forEach(thumb => {
+        thumb.classList.remove('border-[#DC2626]');
+        thumb.classList.add('border-white/10', 'opacity-60');
+      });
+      el.classList.add('border-[#DC2626]');
+      el.classList.remove('border-white/10', 'opacity-60');
+    }
+
+    function closeVehicleModal() {
+      document.getElementById('vehicle-modal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    document.getElementById('vehicle-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'vehicle-modal') closeVehicleModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeVehicleModal();
+    });
+
+    // FAQ ACCORDION (LIQUID GLASS CON ANIMACIÓN SUAVE FLUIDA)
+    function toggleFaq(id) {
+      const collapse = document.getElementById(`faq-collapse-${id}`);
+      const card = document.getElementById(`faq-card-${id}`);
+      const icon = document.getElementById(`faq-icon-${id}`);
+      const badge = document.getElementById(`faq-btn-badge-${id}`);
+
+      if (!collapse || !card) return;
+
+      const isOpen = collapse.classList.contains('grid-rows-[1fr]');
+
+      // Cerrar los otros para mantener el diseño limpio tipo acordeón de lujo
+      for (let i = 1; i <= 5; i++) {
+        const otherCollapse = document.getElementById(`faq-collapse-${i}`);
+        const otherCard = document.getElementById(`faq-card-${i}`);
+        const otherIcon = document.getElementById(`faq-icon-${i}`);
+        const otherBadge = document.getElementById(`faq-btn-badge-${i}`);
+
+        if (otherCollapse && otherCollapse !== collapse) {
+          otherCollapse.classList.remove('grid-rows-[1fr]');
+          otherCollapse.classList.add('grid-rows-[0fr]');
+        }
+        if (otherCard && otherCard !== card) {
+          otherCard.classList.remove('liquid-glass-active');
+        }
+        if (otherIcon && otherIcon !== icon) {
+          otherIcon.classList.remove('rotate-180');
+        }
+        if (otherBadge && otherBadge !== badge) {
+          otherBadge.classList.remove('bg-[#DC2626]', 'text-white', 'border-transparent');
+          otherBadge.classList.add('bg-white/[0.06]', 'border-white/10', 'text-zinc-400');
+        }
+      }
+
+      if (isOpen) {
+        collapse.classList.remove('grid-rows-[1fr]');
+        collapse.classList.add('grid-rows-[0fr]');
+        card.classList.remove('liquid-glass-active');
+        icon.classList.remove('rotate-180');
+        badge.classList.remove('bg-[#DC2626]', 'text-white', 'border-transparent');
+        badge.classList.add('bg-white/[0.06]', 'border-white/10', 'text-zinc-400');
+      } else {
+        collapse.classList.remove('grid-rows-[0fr]');
+        collapse.classList.add('grid-rows-[1fr]');
+        card.classList.add('liquid-glass-active');
+        icon.classList.add('rotate-180');
+        badge.classList.add('bg-[#DC2626]', 'text-white', 'border-transparent');
+        badge.classList.remove('bg-white/[0.06]', 'border-white/10', 'text-zinc-400');
+      }
+    }
+
+    // TOGGLE THEME FOR CIRCULAR GOOGLE MAPS ($10,000 VIEWPORT)
+    function toggleMapTheme() {
+      const iframe = document.getElementById('google-maps-iframe');
+      const label = document.getElementById('map-theme-label');
+      if (!iframe || !label) return;
+
+      if (iframe.classList.contains('map-dark-filter')) {
+        iframe.classList.remove('map-dark-filter');
+        label.textContent = 'Modo Noche Lujo';
+      } else {
+        iframe.classList.add('map-dark-filter');
+        label.textContent = 'Ver Satélite / Normal';
+      }
+    }
+
+    // FILTROS RÁPIDOS
+    function setupQuickFilters() {
+      document.querySelectorAll('.quick-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filterType = btn.getAttribute('data-quick-filter');
+
+          document.querySelectorAll('.quick-pill').forEach(b => {
+            b.classList.remove('bg-white', 'text-black');
+            b.classList.add('bg-[#12151C]', 'text-zinc-300');
+          });
+          btn.classList.add('bg-white', 'text-black');
+          btn.classList.remove('bg-[#12151C]', 'text-zinc-300');
+
+          if (filterType === 'all') {
+            resetAllFilters();
+          } else if (filterType === '4x4') {
+            document.getElementById('filter-drive').value = '4x4';
+            applyFilters();
+          } else if (filterType === 'recientes') {
+            document.getElementById('filter-status').value = 'Recién Ingresado';
+            applyFilters();
+          } else if (filterType === 'low-mileage') {
+            currentFiltered = VEHICLES.filter(c => c.mileageNum < 80000);
+            renderCatalog(currentFiltered);
+            document.getElementById('filter-summary-text').innerHTML = `Mostrando: <strong class="text-white font-bold">Menos de 80,000 mi [${currentFiltered.length}]</strong>`;
+          }
+        });
+      });
+    }
+
+    // INICIALIZACIÓN
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Preloader curtain animation
+      setTimeout(() => {
+        const preloader = document.getElementById('luxury-preloader');
+        const content = document.getElementById('preloader-content');
+        if (content) content.classList.add('scale-95', 'opacity-0');
+        if (preloader) {
+          preloader.classList.add('opacity-0');
+          setTimeout(() => preloader.remove(), 700);
+        }
+      }, 500);
+
+      renderCatalog(VEHICLES);
+
+      const filterSelects = [
+        'filter-brand', 'filter-type', 'filter-year', 'filter-transmission',
+        'filter-drive', 'filter-price', 'filter-status', 'filter-payment'
+      ];
+      filterSelects.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('change', applyFilters);
+      });
+
+      document.getElementById('btn-reset-filters').addEventListener('click', resetAllFilters);
+      document.getElementById('btn-apply-filter').addEventListener('click', applyFilters);
+
+      setupQuickFilters();
+      initCalculator();
+      initDatePicker();
+      setupWhatsAppSubmit();
+    
+    
+  });
+  </script>
+</body>
+</html>
