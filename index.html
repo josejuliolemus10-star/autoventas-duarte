@@ -2237,7 +2237,8 @@ Agradezco confirmar disponibilidad de la unidad. Muchas gracias.`;
             appointmentDate: selectedDateFormatted,
             appointmentTime: selectedTime,
             dateSubmitted: new Date().toLocaleDateString('es-GT', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
-            status: 'Nuevo'
+            status: 'Pendiente',
+            reminderSentAt: null
           });
           localStorage.setItem('autoventas_duarte_leads', JSON.stringify(leads));
         } catch(e) {}
